@@ -46,7 +46,7 @@ class MomentumReversionStrategy(BaseStrategy):
     that combines multiple technical indicators.
     
     Configuration Parameters:
-    - trade_amount: Base trade size in USD (default: 500)
+    - trade_amount: Base trade size in USD (default: 400)
     - rsi_period: RSI calculation period (default: 14)
     - rsi_oversold: RSI oversold threshold (default: 30)
     - rsi_overbought: RSI overbought threshold (default: 70)
@@ -57,11 +57,11 @@ class MomentumReversionStrategy(BaseStrategy):
     - macd_signal: MACD signal line period (default: 9)
     - atr_period: ATR period for volatility (default: 14)
     - volume_threshold: Volume spike threshold multiplier (default: 1.5)
-    - momentum_threshold: Score threshold for momentum trades (default: 60)
-    - reversion_threshold: Score threshold for reversion trades (default: 70)
+    - momentum_threshold: Score threshold for momentum trades (default: 75)
+    - reversion_threshold: Score threshold for reversion trades (default: 80)
     - max_positions: Maximum concurrent positions (default: 3)
-    - stop_loss_atr_multiplier: Stop loss as multiple of ATR (default: 2.0)
-    - take_profit_atr_multiplier: Take profit as multiple of ATR (default: 3.0)
+    - stop_loss_atr_multiplier: Stop loss as multiple of ATR (default: 1.8)
+    - take_profit_atr_multiplier: Take profit as multiple of ATR (default: 4.5)
     - position_size_scaling: Enable dynamic position sizing (default: True)
     """
 
@@ -69,7 +69,7 @@ class MomentumReversionStrategy(BaseStrategy):
         super().__init__(config=config, exchange=exchange)
         
         # Trading parameters
-        self.trade_amount = float(config.get("trade_amount", 500.0))
+        self.trade_amount = float(config.get("trade_amount", 400.0))
         
         # Technical indicator periods
         self.rsi_period = int(config.get("rsi_period", 14))
@@ -87,19 +87,19 @@ class MomentumReversionStrategy(BaseStrategy):
         self.volume_threshold = float(config.get("volume_threshold", 1.5))
         
         # Strategy thresholds
-        self.momentum_threshold = float(config.get("momentum_threshold", 60))
-        self.reversion_threshold = float(config.get("reversion_threshold", 70))
+        self.momentum_threshold = float(config.get("momentum_threshold", 75))
+        self.reversion_threshold = float(config.get("reversion_threshold", 80))
         
         # Risk management
         self.max_positions = int(config.get("max_positions", 3))
-        self.stop_loss_atr_multiplier = float(config.get("stop_loss_atr_multiplier", 2.0))
-        self.take_profit_atr_multiplier = float(config.get("take_profit_atr_multiplier", 3.0))
+        self.stop_loss_atr_multiplier = float(config.get("stop_loss_atr_multiplier", 1.8))
+        self.take_profit_atr_multiplier = float(config.get("take_profit_atr_multiplier", 4.5))
         self.position_size_scaling = bool(config.get("position_size_scaling", True))
         
         # State tracking
         self.positions: List[Dict[str, Any]] = []
         self.last_trade_time: Optional[datetime] = None
-        self.min_trade_interval = timedelta(hours=2)  # Prevent overtrading - 2 hour minimum
+        self.min_trade_interval = timedelta(hours=4)  # Prevent overtrading - 4 hour minimum
         
         # Price history for indicators (need enough for slow MACD)
         self.price_history: deque = deque(maxlen=max(100, self.macd_slow * 3))
