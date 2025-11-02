@@ -102,7 +102,7 @@ class MomentumReversionStrategy(BaseStrategy):
         self.min_trade_interval = timedelta(hours=4)  # Prevent overtrading - 4 hour minimum
         
         # Price history for indicators (need enough for slow MACD)
-        self.price_history: deque = deque(maxlen=max(100, self.macd_slow * 3))
+        self.price_history: deque = deque(maxlen=max(400, self.macd_slow * 3))
         
         # Database client for persistence
         self._db_client = config.get("db_client")
@@ -136,7 +136,7 @@ class MomentumReversionStrategy(BaseStrategy):
         self.price_history.append(market.current_price)
         
         # Need sufficient price history
-        min_required = max(self.bb_period, self.macd_slow, self.atr_period) + 10
+        min_required = max(self.bb_period, self.macd_slow, self.atr_period, 200) + 10
         if len(market.prices) < min_required:
             return Signal("hold", reason=f"Warming up indicators (need {min_required} data points)")
         
@@ -196,7 +196,17 @@ class MomentumReversionStrategy(BaseStrategy):
         
         # Volume analysis (using price volatility as proxy)
         indicators['volume_spike'] = self._detect_volume_spike(prices)
-        
+
+        # Trend analysis using longer-term moving averages
+        sma_short = self._calculate_sma(prices, 50)
+        sma_long = self._calculate_sma(prices, 200)
+        indicators['sma_short'] = sma_short
+        indicators['sma_long'] = sma_long
+        if len(prices) >= 200 and sma_long > 0:
+            indicators['trend_ratio'] = (sma_short - sma_long) / sma_long
+        else:
+            indicators['trend_ratio'] = 0.0
+ 
         return indicators
 
     def _calculate_rsi(self, prices: List[float], period: int) -> float:
@@ -296,6 +306,16 @@ class MomentumReversionStrategy(BaseStrategy):
         
         return ema
 
+    def _calculate_sma(self, prices: List[float], period: int) -> float:
+        """Calculate Simple Moving Average."""
+        if not prices:
+            return 0.0
+
+        if len(prices) < period:
+            return mean(prices)
+
+        return mean(prices[-period:])
+
     def _calculate_atr(self, prices: List[float], period: int) -> float:
         """Calculate Average True Range for volatility."""
         if len(prices) < period + 1:
@@ -341,9 +361,30 @@ class MomentumReversionStrategy(BaseStrategy):
         # Calculate scores for both momentum and mean reversion
         momentum_score = self._calculate_momentum_score(indicators)
         reversion_score = self._calculate_reversion_score(indicators)
-        
+
+        sma_short = indicators.get('sma_short', 0.0)
+        sma_long = indicators.get('sma_long', 0.0)
+        trend_ratio = indicators.get('trend_ratio', 0.0)
+
+        uptrend = False
+        supportive_trend = False
+
+        if sma_long > 0:
+            uptrend = (
+                trend_ratio >= -0.0005
+                and current_price >= sma_long * 0.995
+                and sma_short >= sma_long * 0.995
+            )
+            supportive_trend = (
+                trend_ratio >= -0.005
+                and current_price >= sma_long * 0.97
+            )
+ 
         # Determine trade type based on higher score
         if momentum_score >= self.momentum_threshold:
+            if not uptrend:
+                return Signal("hold", reason="Trend filter prevents momentum entry")
+
             reason = f"Momentum buy (score: {momentum_score:.1f}, RSI: {indicators['rsi']:.1f})"
             size = self._calculate_position_size(portfolio, indicators, current_price)
             
@@ -362,6 +403,9 @@ class MomentumReversionStrategy(BaseStrategy):
             )
         
         elif reversion_score >= self.reversion_threshold:
+            if not supportive_trend:
+                return Signal("hold", reason="Trend filter prevents mean reversion entry")
+
             reason = f"Mean reversion buy (score: {reversion_score:.1f}, BB: {indicators['bb_position']:.2f})"
             size = self._calculate_position_size(portfolio, indicators, current_price)
             

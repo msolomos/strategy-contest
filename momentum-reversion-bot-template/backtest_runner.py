@@ -129,7 +129,7 @@ class HistoricalDataGenerator:
             self.base_price = 1000.0
         
         self.current_price = self.base_price
-        self.price_history = deque(maxlen=200)
+        self.price_history = deque(maxlen=400)
         
         # Initialize with some history
         for _ in range(100):
