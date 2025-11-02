@@ -87,13 +87,13 @@ class MomentumReversionStrategy(BaseStrategy):
         self.volume_threshold = float(config.get("volume_threshold", 1.5))
         
         # Strategy thresholds
-        self.momentum_threshold = float(config.get("momentum_threshold", 75))
-        self.reversion_threshold = float(config.get("reversion_threshold", 80))
+        self.momentum_threshold = float(config.get("momentum_threshold", 78))
+        self.reversion_threshold = float(config.get("reversion_threshold", 82))
         
         # Risk management
         self.max_positions = int(config.get("max_positions", 3))
-        self.stop_loss_atr_multiplier = float(config.get("stop_loss_atr_multiplier", 1.8))
-        self.take_profit_atr_multiplier = float(config.get("take_profit_atr_multiplier", 4.5))
+        self.stop_loss_atr_multiplier = float(config.get("stop_loss_atr_multiplier", 1.6))
+        self.take_profit_atr_multiplier = float(config.get("take_profit_atr_multiplier", 5.0))
         self.position_size_scaling = bool(config.get("position_size_scaling", True))
         
         # State tracking
@@ -140,6 +140,11 @@ class MomentumReversionStrategy(BaseStrategy):
         if len(market.prices) < min_required:
             return Signal("hold", reason=f"Warming up indicators (need {min_required} data points)")
         
+        # Time-based filter: avoid low-liquidity periods
+        hour = now.hour
+        if hour < 8 or hour > 20:  # Only trade during 8am-8pm UTC
+            return Signal("hold", reason="Outside trading hours window")
+        
         # Check trade interval to prevent overtrading
         if self.last_trade_time and (now - self.last_trade_time) < self.min_trade_interval:
             return Signal("hold", reason="Minimum trade interval not elapsed")
@@ -154,6 +159,12 @@ class MomentumReversionStrategy(BaseStrategy):
         
         # Calculate technical indicators
         indicators = self._calculate_indicators(market.prices)
+        
+        # Volatility regime filter: avoid extreme volatility
+        atr = indicators['atr']
+        atr_pct = (atr / market.current_price) * 100
+        if atr_pct > 6.0:  # Skip if volatility is too high
+            return Signal("hold", reason="Volatility too high for entry")
         
         # Check for sell signals first (exit before entry)
         if portfolio.quantity > 0:
@@ -371,13 +382,13 @@ class MomentumReversionStrategy(BaseStrategy):
 
         if sma_long > 0:
             uptrend = (
-                trend_ratio >= -0.0005
-                and current_price >= sma_long * 0.995
-                and sma_short >= sma_long * 0.995
+                trend_ratio >= 0.001
+                and current_price >= sma_long * 1.00
+                and sma_short >= sma_long * 1.00
             )
             supportive_trend = (
-                trend_ratio >= -0.005
-                and current_price >= sma_long * 0.97
+                trend_ratio >= -0.001
+                and current_price >= sma_long * 0.99
             )
  
         # Determine trade type based on higher score
