@@ -197,7 +197,7 @@ class Backtester:
         self.exchange = MockExchange()
         config = {
             'starting_cash': starting_capital,
-            'trade_amount': 400.0,
+            'trade_amount': 450.0,
             'rsi_period': 14,
             'rsi_oversold': 25,
             'rsi_overbought': 75,
@@ -208,11 +208,11 @@ class Backtester:
             'macd_signal': 9,
             'atr_period': 14,
             'volume_threshold': 1.8,
-            'momentum_threshold': 78,
-            'reversion_threshold': 82,
+            'momentum_threshold': 76,
+            'reversion_threshold': 80,
             'max_positions': 2,
-            'stop_loss_atr_multiplier': 1.6,
-            'take_profit_atr_multiplier': 5.0,
+            'stop_loss_atr_multiplier': 1.3,
+            'take_profit_atr_multiplier': 6.5,
             'position_size_scaling': True
         }
         
