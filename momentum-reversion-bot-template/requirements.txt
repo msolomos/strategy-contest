@@ -1,0 +1,9 @@
+# Momentum-Reversion Bot Template - Dependencies
+
+# Core dependencies (inherited from base-bot-template)
+requests>=2.31
+psycopg2-binary>=2.9
+
+# Additional dependencies for strategy
+# (All indicators implemented using stdlib statistics module - no external deps needed)
+
