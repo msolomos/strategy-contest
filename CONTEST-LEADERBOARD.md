@@ -10,13 +10,15 @@
 
 | Rank | Developer | Strategy | Return | PnL | Status |
 |------|-----------|----------|--------|-----|--------|
-| 🥇 **1st** | **jayyx03** | **Adaptive Momentum (#1)** | **+20.64%** | **+$2,064** | ✅ **VERIFIED WINNER** |
+| 🥇 **1st** | **jayyx03** | **Adaptive Momentum (#1)** | **+20.64%** | **+$2,064** | ✅ **CURRENT LEADER** |
 | 🥈 **2nd** | **Wahedul I** | **Trend Following (v2)** | **+6.42%** | **+$642** | ✅ **VERIFIED** |
 | 🥉 **3rd** | **jayyx03** | **Swing Reversion (#2)** | **+4.24%** | **+$424** | ✅ **VERIFIED** |
 | 4th | **Usman A** | **Momentum-Reversion (v4)** | **+1.98%** | **+$198** | ✅ **VERIFIED** |
 
-**To win 1st place**: Need >+20.64% return (>$2,064 profit)
+**To beat current leader**: Need >+20.64% return (>$2,064 profit)
 **To reach podium**: Need >+1.98% return (>$198 profit)
+
+⚠️ **Contest still open!** 18 days remaining for new submissions.
 
 ---
 
@@ -40,7 +42,7 @@
 - **Trades**: 352 total (172 BTC + 180 ETH)
 - **Docker Verification**: ✅ **FULLY VERIFIED** - Initial technical issues resolved
 - **Technical Excellence**: A++ (9.9/10) rating
-- **Status**: 🏆 **CONTEST LEADER**
+- **Status**: 🏆 **CURRENT LEADER** (18 days remaining!)
 
 #### 🥈 Wahedul I - "Adaptive Trend Following" (v2)
 - **Performance**: BTC: +4.97%, ETH: +1.45%, Combined: +6.42%
