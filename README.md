@@ -48,16 +48,32 @@ Create a new strategy template that inherits from the BaseStrategy interface.
 
 ### 📋 Deliverables:
 
-1. **your-strategy-template/ folder containing:**
-   - `your_strategy.py` – main strategy logic
-   - `startup.py` – bot entry point
-   - `Dockerfile` – container definition
-   - `requirements.txt` – dependencies
-   - `README.md` – documentation and parameter explanation
+1. **Folder: your-strategy-template/**
+   Must include exactly these files:
+   ```
+   your-strategy-template/
+   ├─ your_strategy.py
+   ├─ startup.py
+   ├─ Dockerfile
+   ├─ requirements.txt
+   └─ README.md
+   ```
 
-2. **Six-month backtest report** (PnL, Sharpe ratio, drawdown)
+2. **Folder: reports/**
+   Must include:
+   ```
+   reports/
+   ├─ backtest_runner.py
+   ├─ backtest_report.md
+   ```
+   Six-month backtest report (PnL, Sharpe ratio, drawdown)
 
-3. **Clear explanation** of your trading logic
+3. **File: trade_logic_explanation.md**
+   Clear explanation of your trading logic
+
+⚠️ **Anything else will cause disqualification.**
+
+When you submit your entry, in your message include the GitHub repo link
 
 All submissions will be backtested in our automated environment under identical conditions.
 
