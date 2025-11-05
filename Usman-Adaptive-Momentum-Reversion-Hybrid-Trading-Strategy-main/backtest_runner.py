@@ -137,73 +137,51 @@ class MockExchange:
         )
 
 
-import csv
+import yfinance as yf
 
-class RealHistoricalData:
-    """Load real historical market data from CSV file."""
+class YahooFinanceData:
+    """Load real historical market data from Yahoo Finance (contest-compliant)."""
     
-    def __init__(self, csv_file: str, symbol: str):
-        self.csv_file = csv_file
+    def __init__(self, symbol: str, start_date: str, end_date: str):
+        """
+        Initialize data source using Yahoo Finance.
+        
+        Args:
+            symbol: Trading symbol (e.g., 'BTC-USD', 'ETH-USD')
+            start_date: Start date in YYYY-MM-DD format
+            end_date: End date in YYYY-MM-DD format
+        """
         self.symbol = symbol
         self.candles = []
         self.price_history = deque(maxlen=400)
-        self._load_data()
+        self._load_data(start_date, end_date)
     
-    def _parse_timestamp(self, ts_str: str) -> datetime:
-        """Parse timestamp from CSV."""
-        # Remove timezone info if present
-        ts_str = ts_str.replace('+00:00', '').strip()
-        try:
-            return datetime.fromisoformat(ts_str)
-        except:
-            return datetime.strptime(ts_str, '%Y-%m-%d %H:%M:%S')
-    
-    def _load_data(self):
-        """Load OHLCV data from CSV."""
-        with open(self.csv_file, 'r') as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                try:
-                    # Handle both BTC and ETH CSVs
-                    if 'time_period_start' in row:
-                        timestamp = self._parse_timestamp(row['time_period_start'])
-                        candle = {
-                            'timestamp': timestamp,
-                            'open': float(row['price_open']),
-                            'high': float(row['price_high']),
-                            'low': float(row['price_low']),
-                            'close': float(row['price_close']),
-                            'volume': float(row['volume_traded'])
-                        }
-                    else:
-                        # Combined CSV format
-                        if self.symbol == 'BTC-USD':
-                            timestamp = self._parse_timestamp(row['BTC_time_period_start'])
-                            candle = {
-                                'timestamp': timestamp,
-                                'open': float(row['BTC_price_open']),
-                                'high': float(row['BTC_price_high']),
-                                'low': float(row['BTC_price_low']),
-                                'close': float(row['BTC_price_close']),
-                                'volume': float(row['BTC_volume_traded'])
-                            }
-                        else:  # ETH-USD
-                            timestamp = self._parse_timestamp(row['ETH_time_period_start'])
-                            candle = {
-                                'timestamp': timestamp,
-                                'open': float(row['ETH_price_open']),
-                                'high': float(row['ETH_price_high']),
-                                'low': float(row['ETH_price_low']),
-                                'close': float(row['ETH_price_close']),
-                                'volume': float(row['ETH_volume_traded'])
-                            }
-                    
-                    self.candles.append(candle)
-                    self.price_history.append(candle['close'])
-                except Exception as e:
-                    continue
+    def _load_data(self, start_date: str, end_date: str):
+        """Load OHLCV data from Yahoo Finance."""
+        print(f"\nDownloading {self.symbol} data from Yahoo Finance...")
+        print(f"Period: {start_date} to {end_date}")
         
-        print(f"Loaded {len(self.candles)} candles from {self.csv_file}")
+        # Download data using yfinance
+        ticker = yf.Ticker(self.symbol)
+        df = ticker.history(start=start_date, end=end_date, interval='1d')
+        
+        if df.empty:
+            raise ValueError(f"No data available for {self.symbol} in the specified date range")
+        
+        # Convert to our candle format
+        for index, row in df.iterrows():
+            candle = {
+                'timestamp': index.to_pydatetime().replace(tzinfo=timezone.utc),
+                'open': float(row['Open']),
+                'high': float(row['High']),
+                'low': float(row['Low']),
+                'close': float(row['Close']),
+                'volume': float(row['Volume'])
+            }
+            self.candles.append(candle)
+            self.price_history.append(candle['close'])
+        
+        print(f"✓ Loaded {len(self.candles)} candles from Yahoo Finance")
     
     def get_candles_in_range(self, start_date: datetime, end_date: datetime):
         """Get candles within date range."""
@@ -215,10 +193,10 @@ class RealHistoricalData:
 class Backtester:
     """Backtest engine for strategy evaluation."""
     
-    def __init__(self, symbol: str, start_date: str, end_date: str, starting_capital: float = 10000.0, data_file: str = None):
+    def __init__(self, symbol: str, start_date: str, end_date: str, starting_capital: float = 10000.0):
         self.symbol = symbol
-        self.start_date = datetime.fromisoformat(start_date)
-        self.end_date = datetime.fromisoformat(end_date)
+        self.start_date = datetime.fromisoformat(start_date).replace(tzinfo=timezone.utc)
+        self.end_date = datetime.fromisoformat(end_date).replace(tzinfo=timezone.utc)
         self.starting_capital = starting_capital
         
         # Initialize strategy with AGGRESSIVE parameters for maximum returns
@@ -249,12 +227,8 @@ class Backtester:
         self.strategy = MomentumReversionStrategy(config, self.exchange)
         self.portfolio = Portfolio(symbol=symbol, cash=starting_capital)
         
-        # Load real data
-        if not data_file:
-            # Default to combined data file
-            data_file = '/home/usman/Downloads/strategy-contest/data/BTC_USD_1DAY.csv'
-        
-        self.data_source = RealHistoricalData(data_file, symbol)
+        # Load data from Yahoo Finance (contest-compliant)
+        self.data_source = YahooFinanceData(symbol, start_date, end_date)
         
         # Tracking
         self.trades = []
@@ -265,7 +239,7 @@ class Backtester:
     def run(self) -> BacktestResult:
         """Run the backtest."""
         print(f"\n{'='*80}")
-        print(f"BACKTESTING: {self.symbol} (REAL DATA)")
+        print(f"BACKTESTING: {self.symbol} (Yahoo Finance Data - Contest Compliant)")
         print(f"Period: {self.start_date.date()} to {self.end_date.date()}")
         print(f"Starting Capital: ${self.starting_capital:,.2f}")
         print(f"{'='*80}\n")
@@ -598,15 +572,13 @@ Examples:
                        help='End date YYYY-MM-DD (default: 2024-06-30)')
     parser.add_argument('--capital', type=float, default=10000.0,
                        help='Starting capital (default: 10000)')
-    parser.add_argument('--data-file', type=str, default='/home/usman/Downloads/strategy-contest/data/BTC_USD_1DAY.csv',
-                       help='Path to CSV data file')
     parser.add_argument('--output', type=str, default=None,
                        help='Output JSON file (default: auto-generated)')
     
     args = parser.parse_args()
     
     # Run backtest
-    backtester = Backtester(args.symbol, args.start, args.end, args.capital, args.data_file)
+    backtester = Backtester(args.symbol, args.start, args.end, args.capital)
     result = backtester.run()
     
     # Print results
