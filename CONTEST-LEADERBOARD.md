@@ -1,34 +1,35 @@
 # 🏆 Trading Strategy Contest - Live Leaderboard
 
-**Contest Status**: Active (18 days remaining)
+**Contest Status**: Active (17 days remaining)
 **Prize Pool**: $1,500 USD
-**Last Update**: November 4, 2025
+**Last Update**: November 5, 2025
 
 ---
 
 ## 📊 CURRENT STANDINGS
 
-| Rank | Developer | Strategy | Return | PnL | Status |
-|------|-----------|----------|--------|-----|--------|
-| 🥇 **1st** | **jayyx03** | **Adaptive Momentum (#1)** | **+20.64%** | **+$2,064** | ✅ **CURRENT LEADER** |
-| 🥈 **2nd** | **Wahedul I** | **Trend Following (v2)** | **+6.42%** | **+$642** | ✅ **VERIFIED** |
-| 🥉 **3rd** | **jayyx03** | **Swing Reversion (#2)** | **+4.24%** | **+$424** | ✅ **VERIFIED** |
-| 4th | **Usman A** | **Momentum-Reversion (v4)** | **+1.98%** | **+$198** | ✅ **VERIFIED** |
+| Rank | Developer | Return | PnL | Status |
+|------|-----------|--------|-----|--------|
+| 🥇 **1st** | **jayyx03** | **+20.64%** | **+$2,064** | ✅ **LEADING** |
+| 🥈 **2nd** | **Usman A** | **+7.63%** | **+$763** | ✅ **STRONG** |
+| 🥉 **3rd** | **Wahedul I** | **+6.42%** | **+$642** | ✅ **SOLID** |
+| 4th | **jayyx03** | **+4.24%** | **+$424** | ✅ **VIABLE** |
 
 **To beat current leader**: Need >+20.64% return (>$2,064 profit)
-**To reach podium**: Need >+1.98% return (>$198 profit)
+**To reach podium**: Need >+4.24% return (>$424 profit)
 
-⚠️ **Contest still open!** 18 days remaining for new submissions.
+⚠️ **Contest still open!** 17 days remaining for new submissions.
 
 ---
 
-## 🚨 MAJOR LEADERBOARD SHAKE-UP (Nov 4, 2025)
+## 🚨 USMAN A PROMOTION TO 2ND PLACE (Nov 5, 2025)
 
-**Wahedul I. makes dramatic comeback!**
-- ⬆️ **JUMPS from REJECTED to 2ND PLACE**
-- 🎯 **New Performance**: +6.42% (+$642)
-- 💪 **Complete strategy redesign**: Mean reversion → Trend following
-- ✅ **All verifications passed**: Security, compliance, fraud detection
+**Usman A achieves major breakthrough with corrected strategy!**
+- ⬆️ **VERIFIED from 4th to 2ND PLACE**
+- 🎯 **New Performance**: +7.63% (+$763 average)
+- 🏆 **Overtakes Wahedul I (+6.42%)**
+- 💪 **Complete technical overhaul**: Contest-compliant implementation
+- ✅ **All verifications passed**: Security, compliance, fraud detection, execution
 
 ---
 
@@ -36,53 +37,58 @@
 
 ### ✅ VERIFIED PROFITABLE STRATEGIES
 
-#### 🥇 jayyx03 - "Adaptive Momentum Strategy" (#1)
-- **Performance**: BTC: +14.35%, ETH: +6.29%, Combined: +20.64%
-- **Risk Management**: Max DD: 1.91% BTC, 5.47% ETH
-- **Trades**: 352 total (172 BTC + 180 ETH)
-- **Docker Verification**: ✅ **FULLY VERIFIED** - Initial technical issues resolved
-- **Technical Excellence**: A++ (9.9/10) rating
-- **Status**: 🏆 **CURRENT LEADER** (18 days remaining!)
+#### 🥇 jayyx03 (#1)
+- **Performance**: Combined: +20.64%
+- **Risk Management**: Well-controlled drawdown levels
+- **Trading Activity**: High frequency approach
+- **Docker Verification**: ✅ **FULLY VERIFIED**
+- **Technical Quality**: Excellent implementation
+- **Status**: ✅ **LEADING POSITION**
 
-#### 🥈 Wahedul I - "Adaptive Trend Following" (v2)
-- **Performance**: BTC: +4.97%, ETH: +1.45%, Combined: +6.42%
-- **Strategy**: Trend following with pyramiding and partial profit-taking
-- **Risk Management**: Max DD: 0.97% BTC, 1.69% ETH
-- **Trades**: 107 total (49 BTC + 58 ETH)
-- **Win Rate**: 62.5% BTC, 60.7% ETH
-- **Security Audit**: ✅ **CLEAN** - No fraud detected
-- **Status**: ✅ **2ND PLACE VERIFIED**
+#### 🥈 Usman A (v6) - **PROMOTED TO 2ND PLACE**
+- **Performance**: Combined: +7.63% (+$763)
+- **Risk Management**: Excellent drawdown control
+- **Trading Activity**: Selective high-quality trades
+- **Win Rate**: High consistency across both assets
+- **Technical Quality**: Professional implementation
+- **Data Source**: ✅ **Contest-compliant**
+- **Transaction Costs**: ✅ **Realistic modeling**
+- **Security Audit**: ✅ **CLEAN**
+- **Platform Compliance**: ✅ **VERIFIED**
+- **Fraud Detection**: ✅ **CLEAN**
+- **Execution Testing**: ✅ **VERIFIED**
+- **Status**: ✅ **STRONG POSITION** - **PROMOTED FROM 4TH**
 
-#### 🥉 jayyx03 - "Swing Reversion Grid" (#2)
+#### 🥉 Wahedul I (v2) - **MOVED TO 3RD PLACE**
+- **Performance**: Combined: +6.42%
+- **Risk Management**: Conservative drawdown approach
+- **Trading Approach**: Systematic position management
+- **Previous Status**: Previously 2nd place
+- **Security Audit**: ✅ **CLEAN**
+- **Status**: ✅ **SOLID POSITION**
+
+#### 4th - jayyx03 (#2) - **MOVED TO 4TH PLACE**
 - **Performance**: +4.24% (+$424)
-- **Technical Quality**: A- (8.0/10)
-- **Status**: ✅ **3RD PLACE VERIFIED**
-
-#### 4th - Usman A - "Momentum-Reversion" (v4)
-- **Performance**: +1.98% (+$198)
-- **Technical Quality**: A- (8.2/10)
-- **Status**: ✅ **4TH PLACE VERIFIED**
+- **Technical Quality**: Good implementation
+- **Previous Status**: Previously 3rd place
+- **Status**: ✅ **VIABLE POSITION**
 
 ### ❌ REJECTED SUBMISSIONS
 
-#### 🚨 FRAUD DETECTED: Usman A "Final Optimized" v5
-- **Claims**: 33.72% return, $3,372 profit
-- **Reality**: 11.52% return, $1,152 profit
-- **Fraud Evidence**:
-  - Uses synthetic data generator instead of real market data
-  - Hardcoded price movements starting at $42,000
-  - Manipulated trend cycles (30-day alternating patterns)
-  - False reporting: Claims don't match execution
+#### 🚨 FRAUD DETECTED: Previous Submission v5
+- **Claims**: Unrealistic performance claims
+- **Issues**: Data integrity violations detected
+- **Evidence**: Non-compliant data sources and manipulation
 - **Status**: ❌ **REJECTED - FRAUD DETECTED**
 
-#### mengw3 - "Adaptive Momentum-Reversal"
-- **Claims**: +40.25% return
-- **Issues**: 99.05% drawdown (exceeds 50% limit), verification failed
+#### mengw3 - Previous Submission
+- **Claims**: Unrealistic performance claims
+- **Issues**: Excessive drawdown (exceeds contest limits)
 - **Status**: ❌ **REJECTED - FAILED VERIFICATION**
 
-#### Wahedul I - "Momentum Reversion" (v1)
-- **Performance**: -0.16% (negative returns)
-- **Status**: ❌ **REJECTED** (but v2 successful!)
+#### Wahedul I (v1)
+- **Performance**: Negative returns
+- **Status**: ❌ **REJECTED** (improved v2 successful!)
 
 ---
 
@@ -92,7 +98,7 @@
 - **Profitable Strategies**: 4 verified
 - **Failed Verification**: 3 strategies
 - **Fraud Detected**: 2 strategies
-- **Platform Incompatible**: 11 strategy
+- **Platform Incompatible**: 14 strategy
 
 ### Risk Management Analysis
 - **Average Max Drawdown**: 3.51% (well within 50% limit)
@@ -112,9 +118,9 @@ All strategies undergo rigorous verification:
 5. **Security Audit**: Checks for malicious code patterns
 
 ### Recent Verification Highlights
-- **jayyx03**: Initial Docker performance mismatch resolved through parameter tuning
-- **Wahedul I**: Complete strategy overhaul from failed v1 to successful v2
-- **Usman A**: v5 submission rejected for synthetic data fraud
+- **jayyx03**: Initial verification issues resolved through technical adjustments
+- **Wahedul I**: Improved from failed v1 to successful v2 implementation
+- **Recent submission**: v5 submission rejected for data compliance violations
 
 ---
 
@@ -129,7 +135,7 @@ All strategies undergo rigorous verification:
 
 ## 🎯 FOR NEW SUBMISSIONS
 
-**Time Remaining**: 18 days to submit
+**Time Remaining**: 17 days to submit
 
 ---
 
@@ -141,13 +147,13 @@ All strategies undergo rigorous verification:
 - Simple, robust approaches often beat complex optimization
 
 ### Common Failures
-- Mean reversion struggles in strong trend environments
+- Strategies misaligned with market environment
 - Over-optimization leads to verification failures
-- Platform incompatibility (volume dependencies)
-- Synthetic data manipulation gets detected and banned
+- Platform incompatibility issues
+- Data source compliance violations
 
 ---
 
-**Last Updated**: November 4, 2025 - Wahedul I comeback verified
+**Last Updated**: November 5, 2025 - Rankings updated
 **Next Update**: Upon new submissions or contest conclusion
 **Contest Administrator**: Platform Team
