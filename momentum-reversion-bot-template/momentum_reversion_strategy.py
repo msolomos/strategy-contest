@@ -69,7 +69,7 @@ class MomentumReversionStrategy(BaseStrategy):
         super().__init__(config=config, exchange=exchange)
         
         # Trading parameters
-        self.trade_amount = float(config.get("trade_amount", 850.0))
+        self.trade_amount = float(config.get("trade_amount", 450.0))
         
         # Technical indicator periods
         self.rsi_period = int(config.get("rsi_period", 14))
@@ -87,19 +87,19 @@ class MomentumReversionStrategy(BaseStrategy):
         self.volume_threshold = float(config.get("volume_threshold", 1.5))
         
         # Strategy thresholds
-        self.momentum_threshold = float(config.get("momentum_threshold", 69))
-        self.reversion_threshold = float(config.get("reversion_threshold", 74))
+        self.momentum_threshold = float(config.get("momentum_threshold", 76))
+        self.reversion_threshold = float(config.get("reversion_threshold", 80))
         
         # Risk management
-        self.max_positions = int(config.get("max_positions", 5))
-        self.stop_loss_atr_multiplier = float(config.get("stop_loss_atr_multiplier", 1.05))
-        self.take_profit_atr_multiplier = float(config.get("take_profit_atr_multiplier", 11.0))
+        self.max_positions = int(config.get("max_positions", 3))
+        self.stop_loss_atr_multiplier = float(config.get("stop_loss_atr_multiplier", 1.3))
+        self.take_profit_atr_multiplier = float(config.get("take_profit_atr_multiplier", 6.5))
         self.position_size_scaling = bool(config.get("position_size_scaling", True))
         
         # State tracking
         self.positions: List[Dict[str, Any]] = []
         self.last_trade_time: Optional[datetime] = None
-        self.min_trade_interval = timedelta(hours=1)  # Prevent overtrading - 1 hour minimum
+        self.min_trade_interval = timedelta(hours=12)  # Allow same-day re-entry if conditions change
         
         # Price history for indicators (need enough for slow MACD)
         self.price_history: deque = deque(maxlen=max(400, self.macd_slow * 3))
@@ -135,18 +135,12 @@ class MomentumReversionStrategy(BaseStrategy):
         # Update price history
         self.price_history.append(market.current_price)
         
-        # Need sufficient price history
-        min_required = max(self.bb_period, self.macd_slow, self.atr_period, 200) + 10
+        # Need sufficient price history - reduced for daily data
+        min_required = max(self.bb_period, self.macd_slow, self.atr_period) + 5
         if len(market.prices) < min_required:
             return Signal("hold", reason=f"Warming up indicators (need {min_required} data points)")
         
-        # Time-based filter: avoid low-liquidity periods (using market timestamp if available)
-        if hasattr(market, 'timestamp') and market.timestamp:
-            hour = market.timestamp.hour
-        else:
-            hour = now.hour
-        if hour < 8 or hour > 20:  # Only trade during 8am-8pm UTC
-            return Signal("hold", reason="Outside trading hours window")
+        # No time-based filter for daily data - trade any day
         
         # Check trade interval to prevent overtrading
         if self.last_trade_time and (now - self.last_trade_time) < self.min_trade_interval:
@@ -163,11 +157,7 @@ class MomentumReversionStrategy(BaseStrategy):
         # Calculate technical indicators
         indicators = self._calculate_indicators(market.prices)
         
-        # Volatility regime filter: avoid extreme volatility
-        atr = indicators['atr']
-        atr_pct = (atr / market.current_price) * 100
-        if atr_pct > 8.0:  # Skip if volatility is too high
-            return Signal("hold", reason="Volatility too high for entry")
+        # No volatility filter for daily data - we want to trade in all conditions
         
         # Check for sell signals first (exit before entry)
         if portfolio.quantity > 0:
@@ -383,21 +373,13 @@ class MomentumReversionStrategy(BaseStrategy):
         uptrend = False
         supportive_trend = False
 
-        if sma_long > 0:
-            uptrend = (
-                trend_ratio >= -0.003
-                and current_price >= sma_long * 0.99
-                and sma_short >= sma_long * 0.99
-            )
-            supportive_trend = (
-                trend_ratio >= -0.008
-                and current_price >= sma_long * 0.95
-            )
+        # Skip trend filters for daily data - too restrictive
+        uptrend = True  # Always allow momentum trades
+        supportive_trend = True  # Always allow reversion trades
  
+        
         # Determine trade type based on higher score
         if momentum_score >= self.momentum_threshold:
-            if not uptrend:
-                return Signal("hold", reason="Trend filter prevents momentum entry")
 
             reason = f"Momentum buy (score: {momentum_score:.1f}, RSI: {indicators['rsi']:.1f})"
             size = self._calculate_position_size(portfolio, indicators, current_price)
@@ -417,8 +399,6 @@ class MomentumReversionStrategy(BaseStrategy):
             )
         
         elif reversion_score >= self.reversion_threshold:
-            if not supportive_trend:
-                return Signal("hold", reason="Trend filter prevents mean reversion entry")
 
             reason = f"Mean reversion buy (score: {reversion_score:.1f}, BB: {indicators['bb_position']:.2f})"
             size = self._calculate_position_size(portfolio, indicators, current_price)
@@ -440,67 +420,72 @@ class MomentumReversionStrategy(BaseStrategy):
         return None
 
     def _calculate_momentum_score(self, indicators: Dict[str, float]) -> float:
-        """Calculate momentum trading score (0-100)."""
+        """Calculate momentum trading score (0-100) - ULTRA AGGRESSIVE for daily."""
         score = 0
         
         rsi = indicators['rsi']
         macd_histogram = indicators['macd_histogram']
         momentum = indicators['momentum']
-        volume_spike = indicators['volume_spike']
+        bb_position = indicators['bb_position']
         trend_ratio = indicators.get('trend_ratio', 0.0)
         
-        # RSI momentum (bullish if RSI rising from oversold or neutral)
-        if 30 < rsi < 60:
-            score += 25  # Sweet spot for momentum
-        elif rsi < 30:
-            score += 15  # Oversold, potential reversal
+        # RSI - very lenient
+        if rsi < 70:  # Not overbought = buy signal
+            score += 30
+        if rsi > 40:  # Rising from lows
+            score += 15
         
-        # MACD bullish
-        if macd_histogram > 0:
+        # MACD - any non-negative is good
+        if macd_histogram >= 0:
             score += 25
+        elif macd_histogram > -100:  # Not too negative
+            score += 15
         
-        # Positive momentum
-        if momentum > 2:
-            score += 32  # Increased weight for strong momentum
-        elif momentum > 0:
-            score += 16  # Increased weight for positive momentum
+        # Momentum - reward any upward movement
+        if momentum > 0:
+            score += 25
+        elif momentum > -3:  # Not falling too fast
+            score += 15
         
-        # Volume confirmation
-        if volume_spike:
+        # BB position - anywhere not at extremes
+        if 0.2 < bb_position < 0.8:
             score += 20
         
-        # Trend bonus (add points for uptrend)
-        if trend_ratio > 0.002:
-            score += 15  # Strong uptrend bonus
-        elif trend_ratio > 0.001:
-            score += 10  # Moderate uptrend bonus
+        # Trend - reward uptrend
+        if trend_ratio > 0:
+            score += 15
         
         return min(score, 100)
 
     def _calculate_reversion_score(self, indicators: Dict[str, float]) -> float:
-        """Calculate mean reversion trading score (0-100)."""
+        """Calculate mean reversion trading score (0-100) - ULTRA AGGRESSIVE for daily."""
         score = 0
         
         rsi = indicators['rsi']
         bb_position = indicators['bb_position']
         momentum = indicators['momentum']
+        trend_ratio = indicators.get('trend_ratio', 0.0)
         
-        # RSI oversold
-        if rsi < 30:
-            score += 42  # Increased weight for oversold
-        elif rsi < 35:
-            score += 28  # Increased weight for near oversold
-        
-        # Price near or below lower Bollinger Band
-        if bb_position < 0.1:
-            score += 40
-        elif bb_position < 0.2:
-            score += 25
-        
-        # Negative momentum (selling pressure exhausting)
-        if momentum < -5:
+        # RSI - much more lenient
+        if rsi < 55:  # Below neutral = potential buy
+            score += 35
+        if rsi < 45:  # Getting oversold
             score += 20
-        elif momentum < 0:
+        
+        # BB position - below middle is potential reversion
+        if bb_position < 0.5:
+            score += 30
+        if bb_position < 0.3:
+            score += 20
+        
+        # Negative momentum = selling exhaustion
+        if momentum < 0:
+            score += 20
+        if momentum < -1:
+            score += 15
+        
+        # Uptrend makes reversion safer
+        if trend_ratio > 0:
             score += 10
         
         return min(score, 100)
@@ -517,20 +502,18 @@ class MomentumReversionStrategy(BaseStrategy):
         atr_pct = (atr / price) * 100
         trend_ratio = indicators.get('trend_ratio', 0.0)
         
-        # Base volatility scaling - optimized balance
+        # Base volatility scaling
         if atr_pct > 5:  # High volatility
-            vol_scale = 0.88
+            vol_scale = 0.75
         elif atr_pct > 3:  # Medium volatility
-            vol_scale = 1.15
+            vol_scale = 0.90
         else:  # Low volatility
-            vol_scale = 1.55  # Significant size increase in low volatility
+            vol_scale = 1.15
         
         # Trend bonus: increase size in strong uptrends
         trend_bonus = 1.0
         if trend_ratio > 0.002:
-            trend_bonus = 1.55  # 55% bonus for strong uptrends
-        elif trend_ratio > 0.001:
-            trend_bonus = 1.35  # 35% bonus for moderate uptrends
+            trend_bonus = 1.20  # 20% bonus for strong uptrends
         
         return base_size * vol_scale * trend_bonus
 
@@ -566,43 +549,14 @@ class MomentumReversionStrategy(BaseStrategy):
         # Check technical exit signals
         indicators = self._calculate_indicators(market.prices)
         
-        # Enhanced trailing stops: protect profits while letting winners run
+        # Trailing stop: if profit > 2%, use tighter stop to protect gains
         for position in self.positions:
             entry_price = position.get('entry_price', 0)
             if entry_price > 0:
                 profit_pct = ((current_price - entry_price) / entry_price) * 100
-                
-                # Progressive trailing stops - let winners run longer
-                if profit_pct > 6.0:
-                    # Very large profit: protect 80% of gains
+                if profit_pct > 2.0:
+                    # Use trailing stop at entry + 1.2% profit (protect 60% of gains)
                     trailing_stop = entry_price * 1.012
-                    if current_price < trailing_stop:
-                        return Signal(
-                            "sell",
-                            size=portfolio.quantity,
-                            reason=f"Trailing stop hit at {current_price:.2f} (profit: {profit_pct:.2f}%)"
-                        )
-                elif profit_pct > 4.0:
-                    # Large profit: protect 70% of gains
-                    trailing_stop = entry_price * 1.012
-                    if current_price < trailing_stop:
-                        return Signal(
-                            "sell",
-                            size=portfolio.quantity,
-                            reason=f"Trailing stop hit at {current_price:.2f} (profit: {profit_pct:.2f}%)"
-                        )
-                elif profit_pct > 2.0:
-                    # Good profit: protect 60% of gains
-                    trailing_stop = entry_price * 1.008
-                    if current_price < trailing_stop:
-                        return Signal(
-                            "sell",
-                            size=portfolio.quantity,
-                            reason=f"Trailing stop hit at {current_price:.2f} (profit: {profit_pct:.2f}%)"
-                        )
-                elif profit_pct > 0.5:
-                    # Small profit: protect 40% of gains
-                    trailing_stop = entry_price * 1.002
                     if current_price < trailing_stop:
                         return Signal(
                             "sell",
@@ -610,16 +564,16 @@ class MomentumReversionStrategy(BaseStrategy):
                             reason=f"Trailing stop hit at {current_price:.2f} (profit: {profit_pct:.2f}%)"
                         )
         
-        # Exit on overbought RSI (let it run higher)
-        if indicators['rsi'] > 88:
+        # Exit on overbought RSI (more aggressive)
+        if indicators['rsi'] > 80:
             return Signal(
                 "sell",
                 size=portfolio.quantity,
                 reason=f"Overbought exit (RSI: {indicators['rsi']:.1f})"
             )
         
-        # Exit on bearish MACD crossover (less sensitive to let winners run)
-        if indicators['macd_histogram'] < -2.0 and indicators['macd'] < -1.0:
+        # Exit on bearish MACD crossover
+        if indicators['macd_histogram'] < -0.5 and indicators['macd'] < 0:
             return Signal(
                 "sell",
                 size=portfolio.quantity,

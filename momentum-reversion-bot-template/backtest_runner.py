@@ -111,116 +111,122 @@ class MockExchange:
         )
 
 
-class HistoricalDataGenerator:
-    """Generate realistic historical price data for backtesting."""
+import csv
+
+class RealHistoricalData:
+    """Load real historical market data from CSV file."""
     
-    def __init__(self, symbol: str, start_date: datetime, end_date: datetime):
+    def __init__(self, csv_file: str, symbol: str):
+        self.csv_file = csv_file
         self.symbol = symbol
-        self.start_date = start_date
-        self.end_date = end_date
-        self.current_date = start_date
-        
-        # Set realistic starting prices for Jan 2024
-        if symbol == "BTC-USD":
-            self.base_price = 42000.0  # BTC was ~$42k in Jan 2024
-        elif symbol == "ETH-USD":
-            self.base_price = 2250.0   # ETH was ~$2,250 in Jan 2024
-        else:
-            self.base_price = 1000.0
-        
-        self.current_price = self.base_price
+        self.candles = []
         self.price_history = deque(maxlen=400)
-        
-        # Initialize with some history
-        for _ in range(100):
-            self.price_history.append(self.current_price)
+        self._load_data()
     
-    def generate_next_candle(self) -> Optional[Dict[str, Any]]:
-        """Generate next 5-minute candle with realistic price movement."""
-        if self.current_date > self.end_date:
-            return None
+    def _parse_timestamp(self, ts_str: str) -> datetime:
+        """Parse timestamp from CSV."""
+        # Remove timezone info if present
+        ts_str = ts_str.replace('+00:00', '').strip()
+        try:
+            return datetime.fromisoformat(ts_str)
+        except:
+            return datetime.strptime(ts_str, '%Y-%m-%d %H:%M:%S')
+    
+    def _load_data(self):
+        """Load OHLCV data from CSV."""
+        with open(self.csv_file, 'r') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                try:
+                    # Handle both BTC and ETH CSVs
+                    if 'time_period_start' in row:
+                        timestamp = self._parse_timestamp(row['time_period_start'])
+                        candle = {
+                            'timestamp': timestamp,
+                            'open': float(row['price_open']),
+                            'high': float(row['price_high']),
+                            'low': float(row['price_low']),
+                            'close': float(row['price_close']),
+                            'volume': float(row['volume_traded'])
+                        }
+                    else:
+                        # Combined CSV format
+                        if self.symbol == 'BTC-USD':
+                            timestamp = self._parse_timestamp(row['BTC_time_period_start'])
+                            candle = {
+                                'timestamp': timestamp,
+                                'open': float(row['BTC_price_open']),
+                                'high': float(row['BTC_price_high']),
+                                'low': float(row['BTC_price_low']),
+                                'close': float(row['BTC_price_close']),
+                                'volume': float(row['BTC_volume_traded'])
+                            }
+                        else:  # ETH-USD
+                            timestamp = self._parse_timestamp(row['ETH_time_period_start'])
+                            candle = {
+                                'timestamp': timestamp,
+                                'open': float(row['ETH_price_open']),
+                                'high': float(row['ETH_price_high']),
+                                'low': float(row['ETH_price_low']),
+                                'close': float(row['ETH_price_close']),
+                                'volume': float(row['ETH_volume_traded'])
+                            }
+                    
+                    self.candles.append(candle)
+                    self.price_history.append(candle['close'])
+                except Exception as e:
+                    continue
         
-        # Simulate realistic price movements
-        if self.symbol == "BTC-USD":
-            volatility = 0.04  # 4% daily
-        elif self.symbol == "ETH-USD":
-            volatility = 0.05  # 5% daily
-        else:
-            volatility = 0.03
-        
-        # Convert daily volatility to 5-minute candle volatility
-        candle_volatility = volatility / (24 * 12) ** 0.5
-        
-        # Generate realistic price movement
-        import random
-        
-        # Add trend component
-        days_elapsed = (self.current_date - self.start_date).days
-        trend_factor = 0.0002 * (1 if days_elapsed % 60 < 30 else -1)
-        
-        # Random walk with trend
-        change_pct = random.gauss(trend_factor, candle_volatility)
-        new_price = self.current_price * (1 + change_pct)
-        
-        # Generate OHLC
-        high = max(self.current_price, new_price) * (1 + abs(random.gauss(0, candle_volatility * 0.5)))
-        low = min(self.current_price, new_price) * (1 - abs(random.gauss(0, candle_volatility * 0.5)))
-        open_price = self.current_price
-        close_price = new_price
-        
-        candle = {
-            'timestamp': self.current_date,
-            'open': open_price,
-            'high': high,
-            'low': low,
-            'close': close_price,
-            'volume': random.uniform(100, 1000)
-        }
-        
-        self.current_price = close_price
-        self.price_history.append(close_price)
-        self.current_date += timedelta(minutes=5)
-        
-        return candle
+        print(f"Loaded {len(self.candles)} candles from {self.csv_file}")
+    
+    def get_candles_in_range(self, start_date: datetime, end_date: datetime):
+        """Get candles within date range."""
+        for candle in self.candles:
+            if start_date <= candle['timestamp'] <= end_date:
+                yield candle
 
 
 class Backtester:
     """Backtest engine for strategy evaluation."""
     
-    def __init__(self, symbol: str, start_date: str, end_date: str, starting_capital: float = 10000.0):
+    def __init__(self, symbol: str, start_date: str, end_date: str, starting_capital: float = 10000.0, data_file: str = None):
         self.symbol = symbol
         self.start_date = datetime.fromisoformat(start_date)
         self.end_date = datetime.fromisoformat(end_date)
         self.starting_capital = starting_capital
         
-        # Initialize strategy with optimized parameters
+        # Initialize strategy with AGGRESSIVE parameters for maximum returns
         self.exchange = MockExchange()
         config = {
             'starting_cash': starting_capital,
-            'trade_amount': 850.0,
-            'rsi_period': 14,
-            'rsi_oversold': 25,
-            'rsi_overbought': 75,
-            'bb_period': 20,
-            'bb_std_dev': 2.0,
-            'macd_fast': 12,
-            'macd_slow': 26,
-            'macd_signal': 9,
-            'atr_period': 14,
-            'volume_threshold': 1.8,
-            'momentum_threshold': 69,
-            'reversion_threshold': 74,
-            'max_positions': 5,
-            'stop_loss_atr_multiplier': 1.05,
-            'take_profit_atr_multiplier': 11.0,
+            'trade_amount': 2200.0,  # Even larger positions for maximum returns
+            'rsi_period': 7,  # Shorter period for faster signals
+            'rsi_oversold': 35,  # More lenient
+            'rsi_overbought': 65,
+            'bb_period': 14,  # Shorter for faster response
+            'bb_std_dev': 1.8,  # Tighter bands for more signals
+            'macd_fast': 8,
+            'macd_slow': 17,
+            'macd_signal': 6,
+            'atr_period': 10,
+            'volume_threshold': 1.3,  # Lower threshold for more volume signals
+            'momentum_threshold': 40,  # Very low for daily data
+            'reversion_threshold': 45,  # Very low for daily data
+            'max_positions': 1,  # Focus on one strong trade at a time
+            'stop_loss_atr_multiplier': 2.0,  # Wider stops to avoid premature exits
+            'take_profit_atr_multiplier': 7.0,  # Even higher profit targets to capture big moves
             'position_size_scaling': True
         }
         
         self.strategy = MomentumReversionStrategy(config, self.exchange)
         self.portfolio = Portfolio(symbol=symbol, cash=starting_capital)
         
-        # Data generator
-        self.data_gen = HistoricalDataGenerator(symbol, self.start_date, self.end_date)
+        # Load real data
+        if not data_file:
+            # Default to combined data file
+            data_file = '/home/usman/Downloads/strategy-contest/data/BTC_USD_1DAY.csv'
+        
+        self.data_source = RealHistoricalData(data_file, symbol)
         
         # Tracking
         self.trades = []
@@ -231,22 +237,20 @@ class Backtester:
     def run(self) -> BacktestResult:
         """Run the backtest."""
         print(f"\n{'='*80}")
-        print(f"BACKTESTING: {self.symbol}")
+        print(f"BACKTESTING: {self.symbol} (REAL DATA)")
         print(f"Period: {self.start_date.date()} to {self.end_date.date()}")
         print(f"Starting Capital: ${self.starting_capital:,.2f}")
         print(f"{'='*80}\n")
         
         candle_count = 0
+        last_price = None
         
-        while True:
-            candle = self.data_gen.generate_next_candle()
-            if candle is None:
-                break
-            
+        for candle in self.data_source.get_candles_in_range(self.start_date, self.end_date):
             candle_count += 1
+            last_price = candle['close']
             
-            # Create market snapshot
-            prices = list(self.data_gen.price_history)
+            # Create market snapshot with accumulated price history
+            prices = list(self.data_source.price_history)
             market = MarketSnapshot(
                 symbol=self.symbol,
                 prices=prices,
@@ -328,14 +332,17 @@ class Backtester:
             if drawdown > self.max_drawdown:
                 self.max_drawdown = drawdown
             
-            # Progress update every 1000 candles
-            if candle_count % 1000 == 0:
+            # Progress update every 30 days
+            if candle_count % 30 == 0:
                 days_elapsed = (candle['timestamp'] - self.start_date).days
                 print(f"Progress: Day {days_elapsed} | Trades: {len(self.trades)} | "
                       f"Portfolio: ${current_value:,.2f} | Drawdown: {drawdown:.2f}%")
         
+        if last_price is None:
+            raise ValueError("No candles in date range")
+        
         # Calculate final results
-        final_value = self.portfolio.value(self.data_gen.current_price)
+        final_value = self.portfolio.value(last_price)
         
         print(f"\n{'='*80}")
         print("BACKTEST COMPLETE")
@@ -544,13 +551,15 @@ Examples:
                        help='End date YYYY-MM-DD (default: 2024-06-30)')
     parser.add_argument('--capital', type=float, default=10000.0,
                        help='Starting capital (default: 10000)')
+    parser.add_argument('--data-file', type=str, default='/home/usman/Downloads/strategy-contest/data/BTC_USD_1DAY.csv',
+                       help='Path to CSV data file')
     parser.add_argument('--output', type=str, default=None,
                        help='Output JSON file (default: auto-generated)')
     
     args = parser.parse_args()
     
     # Run backtest
-    backtester = Backtester(args.symbol, args.start, args.end, args.capital)
+    backtester = Backtester(args.symbol, args.start, args.end, args.capital, args.data_file)
     result = backtester.run()
     
     # Print results
