@@ -48,6 +48,10 @@ Thumbs.db
 # Contest specific
 submissions/
 participant-submissions/
+Usman-Adaptive-Momentum-Reversion-Hybrid-Trading-Strategy-main/
+Trading-Strategy-BTC-main/
+strategyname-jayyx03-main/
+second_submission_jayyx03-main/
 
 # Sensitive data
 *secret*
@@ -59,3 +63,10 @@ config/secrets.json
 test_results/
 backtest_data/
 performance_reports/
+
+
+# local files
+settings.local.json
+
+# contest files
+CLAUDE_CONTEST_TRACKER.md
