@@ -135,10 +135,18 @@ All submissions will be backtested in our automated environment under identical 
    - Upload your complete `your-strategy-template/` folder
    - Include all required deliverables
 
-## ⚖️ Fair Play & Verification
+## ⚖️ Contest Rules & Fair Play
 
+### 📝 Submission Rules
+1. **Maximum Submissions:** Each participant may submit up to **3 strategies maximum**
+2. **Rejected Strategy Policy:** If a strategy is rejected during evaluation, it **cannot be resubmitted or improved**
+3. **Accepted Strategy Improvements:** Strategies that pass initial evaluation **can be continuously improved until contest end**
+4. **Fraud Policy:** Any participant caught using fraud or data manipulation (with or without AI assistance) will be **permanently banned from the contest**
+
+### 🔍 Verification Process
 - All strategies will be re-executed in a controlled backtesting environment
-- Hardcoded data or manipulation of test results will lead to disqualification
+- Hardcoded data or manipulation of test results will lead to immediate disqualification
+- Synthetic data generation or artificial performance inflation is strictly prohibited
 - By submitting, you agree that winning strategies may be integrated into our SaaS platform
 
 ## 💡 Why Join This Contest

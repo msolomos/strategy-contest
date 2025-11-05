@@ -66,12 +66,20 @@ All submissions undergo:
 4. **Risk assessment**: Drawdown limits, trade frequency
 5. **Docker verification**: Live container testing
 
+## 📝 Important Contest Rules
+
+### Submission Limits & Policies:
+1. **3 Strategy Maximum**: Each participant can submit up to 3 different strategies
+2. **No Rejected Strategy Improvements**: Once a strategy is rejected, it cannot be resubmitted or modified
+3. **Accepted Strategy Updates**: Strategies that pass evaluation can be continuously improved until contest ends
+4. **Zero Tolerance Fraud Policy**: Data manipulation or fraud (AI-assisted or otherwise) results in permanent ban
+
 ## 💡 Pro Tips
 
 - **Test thoroughly**: Include comprehensive backtest framework
 - **Document clearly**: Explain your trading logic and parameters
 - **Keep it simple**: Focus on robust, verifiable strategies
-- **Multiple attempts allowed**: Learn from submissions and iterate
+- **Choose wisely**: You only get 3 submissions maximum - make them count
 - **Study the framework**: Understand BaseStrategy inheritance requirements
 
 ## 🚨 Common Disqualification Reasons
