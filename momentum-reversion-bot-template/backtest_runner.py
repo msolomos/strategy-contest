@@ -66,6 +66,7 @@ class BacktestResult:
     ending_capital: float
     total_return_pct: float
     total_pnl: float
+    total_fees: float  # Total fees paid
     total_trades: int
     winning_trades: int
     losing_trades: int
@@ -82,31 +83,56 @@ class BacktestResult:
 
 
 class MockExchange:
-    """Mock exchange for backtesting."""
+    """Mock exchange for backtesting with realistic fees and slippage."""
     
-    def __init__(self):
+    def __init__(self, maker_fee=0.001, taker_fee=0.002, slippage=0.0005):
+        """
+        Initialize exchange with realistic costs.
+        
+        Args:
+            maker_fee: Maker fee (default 0.1%)
+            taker_fee: Taker fee (default 0.2%) - used for market orders
+            slippage: Slippage per trade (default 0.05%)
+        """
         self.name = "backtest"
+        self.maker_fee = maker_fee
+        self.taker_fee = taker_fee
+        self.slippage = slippage
     
     def fetch_market_snapshot(self, symbol: str, limit: int) -> MarketSnapshot:
         """Not used in backtest - we provide data directly."""
         pass
     
     def execute_trade(self, symbol: str, side: str, size: float, price: float):
-        """Simulate trade execution with no slippage."""
+        """Simulate trade execution with realistic slippage and fees."""
         from dataclasses import dataclass
         from datetime import datetime, timezone
+        
+        # Apply slippage (market orders)
+        if side == 'buy':
+            execution_price = price * (1 + self.slippage)  # Pay more
+        else:  # sell
+            execution_price = price * (1 - self.slippage)  # Receive less
+        
+        # Calculate fee (taker fee for market orders)
+        notional = execution_price * size
+        fee = notional * self.taker_fee
         
         @dataclass
         class TradeExecution:
             side: str
             size: float
             price: float
+            execution_price: float
+            fee: float
             timestamp: datetime
         
         return TradeExecution(
             side=side,
             size=size,
             price=price,
+            execution_price=execution_price,
+            fee=fee,
             timestamp=datetime.now(timezone.utc)
         )
 
@@ -196,7 +222,9 @@ class Backtester:
         self.starting_capital = starting_capital
         
         # Initialize strategy with AGGRESSIVE parameters for maximum returns
-        self.exchange = MockExchange()
+        # Use realistic exchange fees: 0.1% maker, 0.2% taker, 0.05% slippage
+        self.exchange = MockExchange(maker_fee=0.001, taker_fee=0.002, slippage=0.0005)
+        self.total_fees = 0.0  # Track total fees paid
         config = {
             'starting_cash': starting_capital,
             'trade_amount': 2200.0,  # Even larger positions for maximum returns
@@ -263,15 +291,18 @@ class Backtester:
             
             # Execute trade
             if signal.action == "buy" and signal.size > 0:
-                cost = signal.size * candle['close']
-                if cost <= self.portfolio.cash:
-                    execution = self.exchange.execute_trade(
-                        self.symbol, "buy", signal.size, candle['close']
-                    )
-                    execution.timestamp = candle['timestamp']
-                    
-                    self.portfolio.cash -= cost
+                execution = self.exchange.execute_trade(
+                    self.symbol, "buy", signal.size, candle['close']
+                )
+                execution.timestamp = candle['timestamp']
+                
+                # Calculate total cost with slippage and fees
+                total_cost = execution.execution_price * signal.size + execution.fee
+                
+                if total_cost <= self.portfolio.cash:
+                    self.portfolio.cash -= total_cost
                     self.portfolio.quantity += signal.size
+                    self.total_fees += execution.fee
                     
                     self.strategy.on_trade(signal, candle['close'], signal.size, candle['timestamp'])
                     
@@ -279,8 +310,11 @@ class Backtester:
                         'timestamp': candle['timestamp'].isoformat(),
                         'side': 'buy',
                         'price': candle['close'],
+                        'execution_price': execution.execution_price,
                         'size': signal.size,
-                        'cost': cost,
+                        'cost': execution.execution_price * signal.size,
+                        'fee': execution.fee,
+                        'total_cost': total_cost,
                         'reason': signal.reason,
                         'portfolio_value': self.portfolio.value(candle['close'])
                     })
@@ -293,17 +327,25 @@ class Backtester:
                     )
                     execution.timestamp = candle['timestamp']
                     
-                    proceeds = size * candle['close']
-                    self.portfolio.cash += proceeds
+                    # Calculate proceeds after slippage and fees
+                    gross_proceeds = execution.execution_price * size
+                    net_proceeds = gross_proceeds - execution.fee
+                    
+                    self.portfolio.cash += net_proceeds
                     self.portfolio.quantity -= size
+                    self.total_fees += execution.fee
                     
                     self.strategy.on_trade(signal, candle['close'], size, candle['timestamp'])
                     
-                    # Calculate PnL for this trade
+                    # Calculate PnL for this trade (including all costs)
                     buy_trades = [t for t in self.trades if t['side'] == 'buy']
                     if buy_trades:
-                        avg_buy_price = sum(t['price'] * t['size'] for t in buy_trades) / sum(t['size'] for t in buy_trades)
-                        pnl = (candle['close'] - avg_buy_price) * size
+                        # Get average buy cost including fees
+                        total_buy_cost = sum(t.get('total_cost', t['cost']) for t in buy_trades)
+                        total_buy_size = sum(t['size'] for t in buy_trades)
+                        avg_buy_cost = total_buy_cost / total_buy_size if total_buy_size > 0 else 0
+                        # PnL = net proceeds - average cost per unit * size sold
+                        pnl = net_proceeds - (avg_buy_cost * size)
                     else:
                         pnl = 0
                     
@@ -311,8 +353,11 @@ class Backtester:
                         'timestamp': candle['timestamp'].isoformat(),
                         'side': 'sell',
                         'price': candle['close'],
+                        'execution_price': execution.execution_price,
                         'size': size,
-                        'proceeds': proceeds,
+                        'gross_proceeds': gross_proceeds,
+                        'fee': execution.fee,
+                        'net_proceeds': net_proceeds,
                         'reason': signal.reason,
                         'pnl': pnl,
                         'portfolio_value': self.portfolio.value(candle['close'])
@@ -428,6 +473,7 @@ class Backtester:
             ending_capital=final_value,
             total_return_pct=total_return_pct,
             total_pnl=total_pnl,
+            total_fees=self.total_fees,  # Include fees in results
             total_trades=total_trades,
             winning_trades=win_count,
             losing_trades=loss_count,
@@ -458,6 +504,7 @@ def print_results(result: BacktestResult):
     print(f"Ending Capital:       ${result.ending_capital:>12,.2f}")
     print(f"Total P&L:            ${result.total_pnl:>12,.2f}")
     print(f"Total Return:         {result.total_return_pct:>12.2f}%")
+    print(f"Total Fees Paid:      ${result.total_fees:>12,.2f}")
     print(f"\n{'-'*80}")
     print("TRADE STATISTICS")
     print("-"*80)
