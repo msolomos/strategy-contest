@@ -68,6 +68,12 @@ All submissions undergo:
 
 ## 📝 Important Contest Rules
 
+### Technical Requirements:
+1. **Data Interval**: Must use **hourly data** (interval='1h') for fair comparison
+2. **Maximum Position Size**: **55% maximum exposure** per trade (position sizing cannot exceed 0.55 of portfolio)
+3. **Data Source**: Yahoo Finance only (yfinance library) - no synthetic or external data
+4. **Data Period**: Exactly 2024-01-01 to 2024-06-30 (4344 hourly candles)
+
 ### Submission Limits & Policies:
 1. **3 Strategy Maximum**: Each participant can submit up to 3 different strategies
 2. **No Rejected Strategy Improvements**: Once a strategy is rejected, it cannot be resubmitted or modified
@@ -86,7 +92,10 @@ All submissions undergo:
 
 - **Missing files**: Incomplete submission structure
 - **Platform incompatibility**: Using unavailable data sources
+- **Wrong data interval**: Using daily instead of required hourly data
+- **Excessive position sizing**: >55% max exposure limit exceeded
 - **Excessive risk**: >50% drawdown limit exceeded
+- **Data manipulation**: Using wrong date range or non-Yahoo Finance data
 - **Verification failure**: Claims not independently reproducible
 - **Security issues**: Malicious code or unsafe dependencies
 
