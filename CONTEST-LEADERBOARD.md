@@ -1,8 +1,8 @@
 # 🏆 Trading Strategy Contest - Live Leaderboard
 
-**Contest Status**: Active (17 days remaining)
+**Contest Status**: Active (16 days remaining)
 **Prize Pool**: $1,500 USD
-**Last Update**: November 5, 2025
+**Last Update**: November 6, 2025
 
 ---
 
@@ -10,26 +10,27 @@
 
 | Rank | Developer | Return | PnL | Status |
 |------|-----------|--------|-----|--------|
-| 🥇 **1st** | **jayyx03** | **+20.64%** | **+$2,064** | ✅ **LEADING** |
-| 🥈 **2nd** | **Usman A** | **+7.63%** | **+$763** | ✅ **STRONG** |
-| 🥉 **3rd** | **Wahedul I** | **+6.42%** | **+$642** | ✅ **SOLID** |
-| 4th | **jayyx03** | **+4.24%** | **+$424** | ✅ **VIABLE** |
+| 🥇 **1st** | **Qinglei W** | **+36.10%** | **+$3,610** | ✅ **LEADING** |
+| 🥈 **2nd** | **jayyx03** | **+20.64%** | **+$2,064** | ✅ **STRONG** |
+| 🥉 **3rd** | **Usman A** | **+7.63%** | **+$763** | ✅ **SOLID** |
+| 4th | **Wahedul I** | **+6.42%** | **+$642** | ✅ **VIABLE** |
+| 5th | **jayyx03** | **+4.24%** | **+$424** | ✅ **COMPETITIVE** |
 
-**To beat current leader**: Need >+20.64% return (>$2,064 profit)
-**To reach podium**: Need >+4.24% return (>$424 profit)
+**To beat current leader**: Need >+36.10% return (>$3,610 profit)
+**To reach podium**: Need >+6.42% return (>$642 profit)
 
-⚠️ **Contest still open!** 17 days remaining for new submissions.
+⚠️ **Contest still open!** 16 days remaining for new submissions.
 
 ---
 
-## 🚨 USMAN A PROMOTION TO 2ND PLACE (Nov 5, 2025)
+## 🏆 QINGLEI W TAKES 1ST PLACE! (Nov 6, 2025)
 
-**Usman A achieves major breakthrough with corrected strategy!**
-- ⬆️ **VERIFIED from 4th to 2ND PLACE**
-- 🎯 **New Performance**: +7.63% (+$763 average)
-- 🏆 **Overtakes Wahedul I (+6.42%)**
-- 💪 **Complete technical overhaul**: Contest-compliant implementation
-- ✅ **All verifications passed**: Security, compliance, fraud detection, execution
+**Qinglei W achieves commanding lead with corrected strategy!**
+- 🚀 **NEW CONTEST LEADER**: +36.10% (+$3,610)
+- 📈 **Outstanding Performance**: BTC +42.50%, ETH +29.70%
+- 🏆 **Overtakes jayyx03 (+20.64%) by +15.46 points**
+- ✅ **Full verification passed**: Security, compliance, data integrity, performance
+- 🎯 **Risk Management**: 26.16% max drawdown (well within limits)
 
 ---
 
@@ -37,15 +38,26 @@
 
 ### ✅ VERIFIED PROFITABLE STRATEGIES
 
-#### 🥇 jayyx03 (#1)
-- **Performance**: Combined: +20.64%
+#### 🥇 Qinglei W (#1) - **NEW CONTEST LEADER**
+- **Performance**: Combined: +36.10% (+$3,610)
+- **BTC Performance**: +42.50% with excellent risk control
+- **ETH Performance**: +29.70% with consistent execution
+- **Risk Management**: 26.16% max drawdown (excellent control)
+- **Trading Activity**: 68 total trades with 71.9% avg win rate
+- **Data Compliance**: ✅ **VERIFIED Yahoo Finance usage**
+- **Security Audit**: ✅ **CLEAN**
+- **Platform Compliance**: ✅ **VERIFIED**
+- **Status**: ✅ **COMMANDING LEAD**
+
+#### 🥈 jayyx03 (#1) - **MOVED TO 2ND PLACE**
+- **Performance**: Combined: +20.64% (+$2,064)
 - **Risk Management**: Well-controlled drawdown levels
 - **Trading Activity**: High frequency approach
 - **Docker Verification**: ✅ **FULLY VERIFIED**
 - **Technical Quality**: Excellent implementation
-- **Status**: ✅ **LEADING POSITION**
+- **Status**: ✅ **STRONG POSITION**
 
-#### 🥈 Usman A (v6) - **PROMOTED TO 2ND PLACE**
+#### 🥉 Usman A (v6) - **MOVED TO 3RD PLACE**
 - **Performance**: Combined: +7.63% (+$763)
 - **Risk Management**: Excellent drawdown control
 - **Trading Activity**: Selective high-quality trades
@@ -59,19 +71,17 @@
 - **Execution Testing**: ✅ **VERIFIED**
 - **Status**: ✅ **STRONG POSITION** - **PROMOTED FROM 4TH**
 
-#### 🥉 Wahedul I (v2) - **MOVED TO 3RD PLACE**
-- **Performance**: Combined: +6.42%
+#### 4th - Wahedul I (v2) - **MOVED TO 4TH PLACE**
+- **Performance**: Combined: +6.42% (+$642)
 - **Risk Management**: Conservative drawdown approach
 - **Trading Approach**: Systematic position management
-- **Previous Status**: Previously 2nd place
 - **Security Audit**: ✅ **CLEAN**
-- **Status**: ✅ **SOLID POSITION**
+- **Status**: ✅ **VIABLE POSITION**
 
-#### 4th - jayyx03 (#2) - **MOVED TO 4TH PLACE**
+#### 5th - jayyx03 (#2) - **MOVED TO 5TH PLACE**
 - **Performance**: +4.24% (+$424)
 - **Technical Quality**: Good implementation
-- **Previous Status**: Previously 3rd place
-- **Status**: ✅ **VIABLE POSITION**
+- **Status**: ✅ **COMPETITIVE POSITION**
 
 ### ❌ REJECTED SUBMISSIONS
 
@@ -135,7 +145,7 @@ All strategies undergo rigorous verification:
 
 ## 🎯 FOR NEW SUBMISSIONS
 
-**Time Remaining**: 17 days to submit
+**Time Remaining**: 16 days to submit
 
 ---
 
@@ -154,6 +164,6 @@ All strategies undergo rigorous verification:
 
 ---
 
-**Last Updated**: November 5, 2025 - Rankings updated
+**Last Updated**: November 6, 2025 - NEW LEADER: Qinglei W (+36.10%)
 **Next Update**: Upon new submissions or contest conclusion
 **Contest Administrator**: Platform Team

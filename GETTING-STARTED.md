@@ -6,7 +6,7 @@ Complete guide to building and submitting your trading strategy.
 - **Prize Pool**: $1,500 USD (1st: $1,000, 2nd: $300, 3rd: $200)
 - **Target**: Build the most profitable BTC/ETH trading strategy
 - **Data**: Jan-Jun 2024 backtest period, $10,000 starting capital
-- **Deadline**: 17 days remaining
+- **Deadline**: 16 days remaining
 
 ## 🚀 Quick Start
 
