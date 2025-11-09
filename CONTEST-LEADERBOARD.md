@@ -11,13 +11,14 @@
 | Rank | Developer | Return | PnL |
 |------|-----------|--------|-----|
 | 🥇 **1st** | **Qinglei W** | **+36.10%** | **+$3,610** |
-| 🥈 **2nd** | **jayyx03** | **+20.64%** | **+$2,064** |
-| 🥉 **3rd** | **Usman A** | **+7.63%** | **+$763** |
-| 4th | **Wahedul I** | **+6.42%** | **+$642** |
-| 5th | **jayyx03** | **+4.24%** | **+$424** |
+| 🥈 **2nd** | **Edudzi A** | **+26.70%** | **+$2,670** |
+| 🥉 **3rd** | **jayyx03** | **+20.64%** | **+$2,064** |
+| 4th | **Usman A** | **+7.63%** | **+$763** |
+| 5th | **Wahedul I** | **+6.42%** | **+$642** |
+| 6th | **jayyx03** | **+4.24%** | **+$424** |
 
 **To beat current leader**: Need >+36.10% return (>$3,610 profit)
-**To reach podium**: Need >+6.42% return (>$642 profit)
+**To reach podium**: Need >+20.64% return (>$2,064 profit)
 
 
 
@@ -49,7 +50,20 @@
 - **Platform Compliance**: ✅ **VERIFIED**
 - **Status**: ✅ **COMMANDING LEAD**
 
-#### 🥈 jayyx03 (#1) - **MOVED TO 2ND PLACE**
+#### 🥈 Edudzi A (Buy-Hold Maximizer) - **NEW 2ND PLACE**
+- **Performance**: Combined: +26.70% (+$2,670)
+- **BTC Performance**: +26.41% with 12.55% max drawdown
+- **ETH Performance**: +27.00% with 17.02% max drawdown
+- **Strategy Type**: Buy-and-hold maximizer with 55% position sizing
+- **Trading Activity**: 36 total trades with 97.5% win rate
+- **Risk Management**: 17.02% max drawdown (excellent control)
+- **Security Audit**: ✅ **CLEAN**
+- **Platform Compliance**: ✅ **VERIFIED**
+- **Data Compliance**: ✅ **VERIFIED Yahoo Finance hourly**
+- **Docker Deployment**: ✅ **LIVE CONTAINER VERIFIED**
+- **Status**: ✅ **SOLID 2ND PLACE**
+
+#### 🥉 jayyx03 (#1) - **MOVED TO 3RD PLACE**
 - **Performance**: Combined: +20.64% (+$2,064)
 - **Risk Management**: Well-controlled drawdown levels
 - **Trading Activity**: High frequency approach
@@ -57,7 +71,7 @@
 - **Technical Quality**: Excellent implementation
 - **Status**: ✅ **STRONG POSITION**
 
-#### 🥉 Usman A (v6) - **MOVED TO 3RD PLACE**
+#### 4th - Usman A (v6) - **MOVED TO 4TH PLACE**
 - **Performance**: Combined: +7.63% (+$763)
 - **Risk Management**: Excellent drawdown control
 - **Trading Activity**: Selective high-quality trades
@@ -69,16 +83,16 @@
 - **Platform Compliance**: ✅ **VERIFIED**
 - **Fraud Detection**: ✅ **CLEAN**
 - **Execution Testing**: ✅ **VERIFIED**
-- **Status**: ✅ **STRONG POSITION** - **PROMOTED FROM 4TH**
+- **Status**: ✅ **STRONG POSITION**
 
-#### 4th - Wahedul I (v2) - **MOVED TO 4TH PLACE**
+#### 5th - Wahedul I (v2) - **MOVED TO 5TH PLACE**
 - **Performance**: Combined: +6.42% (+$642)
 - **Risk Management**: Conservative drawdown approach
 - **Trading Approach**: Systematic position management
 - **Security Audit**: ✅ **CLEAN**
 - **Status**: ✅ **VIABLE POSITION**
 
-#### 5th - jayyx03 (#2) - **MOVED TO 5TH PLACE**
+#### 6th - jayyx03 (#2) - **MOVED TO 6TH PLACE**
 - **Performance**: +4.24% (+$424)
 - **Technical Quality**: Good implementation
 - **Status**: ✅ **COMPETITIVE POSITION**
