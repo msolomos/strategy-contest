@@ -22,6 +22,16 @@
 
 **Impact**: Disqualification rate now **approaching 30%** due to platform compatibility issues - technical compliance remains as critical as performance!
 
+### 🔧 **Abu B. Resubmission Update**
+
+**Partial Progress**: Abu B. submitted revised strategy addressing previous feedback. While improvements noted (yfinance integration, proper methods), **critical API incompatibility remains**. Strategy still uses `generate_signal(bar)` instead of required `generate_signal(market, portfolio)` signature.
+
+**Status**: Still rejected - framework integration incomplete despite 40% progress toward compliance.
+
+### 🔄 **Saniya Resubmission Rejected**
+
+**Same Pattern Repeats**: Saniya's revised strategy confirms previous platform compatibility warnings. Despite clean mean reversion logic, submission uses `generate_signal(symbol, data)` API and custom BacktestExchange instead of required Yahoo Finance data. **Framework incompatibility persists** - complete rewrite needed for contest integration.
+
 ---
 
 
