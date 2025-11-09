@@ -2,6 +2,20 @@
 
 ---
 
+## 📅 **November 9, 2025** - *13 Days Until Contest End*
+
+### 🔍 **Platform Compatibility Alert**
+
+Our verification team identified another platform incompatibility issue today. A new submission from participant **Saniya** showed promising returns (+24.31%) but used an incompatible framework that cannot run in our contest environment. The strategy required complete rewrite to use our BaseStrategy interface.
+
+**Key Finding**: Strategies using custom `on_bar()` and `generate_signals()` methods are incompatible with contest requirements. All submissions must inherit from BaseStrategy and implement the standard `generate_signal()` method.
+
+This brings our **disqualification rate to 25%** due to platform compatibility issues - a reminder that technical compliance is just as important as performance.
+
+---
+
+
+
 ## 📅 **November 8, 2025** - *14 Days Until Contest End*
 
 ### 🔥 **Contest Stats Update**

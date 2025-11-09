@@ -1,25 +1,25 @@
 # 🏆 Trading Strategy Contest - Live Leaderboard
 
-**Contest Status**: Active (16 days remaining)
+**Contest Status**: Active (13 days remaining)
 **Prize Pool**: $1,500 USD
-**Last Update**: November 6, 2025
+**Last Update**: November 9, 2025
 
 ---
 
 ## 📊 CURRENT STANDINGS
 
-| Rank | Developer | Return | PnL | Status |
-|------|-----------|--------|-----|--------|
-| 🥇 **1st** | **Qinglei W** | **+36.10%** | **+$3,610** | ✅ **LEADING** |
-| 🥈 **2nd** | **jayyx03** | **+20.64%** | **+$2,064** | ✅ **STRONG** |
-| 🥉 **3rd** | **Usman A** | **+7.63%** | **+$763** | ✅ **SOLID** |
-| 4th | **Wahedul I** | **+6.42%** | **+$642** | ✅ **VIABLE** |
-| 5th | **jayyx03** | **+4.24%** | **+$424** | ✅ **COMPETITIVE** |
+| Rank | Developer | Return | PnL |
+|------|-----------|--------|-----|
+| 🥇 **1st** | **Qinglei W** | **+36.10%** | **+$3,610** |
+| 🥈 **2nd** | **jayyx03** | **+20.64%** | **+$2,064** |
+| 🥉 **3rd** | **Usman A** | **+7.63%** | **+$763** |
+| 4th | **Wahedul I** | **+6.42%** | **+$642** |
+| 5th | **jayyx03** | **+4.24%** | **+$424** |
 
 **To beat current leader**: Need >+36.10% return (>$3,610 profit)
 **To reach podium**: Need >+6.42% return (>$642 profit)
 
-⚠️ **Contest still open!** 16 days remaining for new submissions.
+
 
 ---
 
@@ -102,21 +102,6 @@
 
 ---
 
-## 📈 CONTEST STATISTICS
-
-### Performance Distribution
-- **Profitable Strategies**: 4 verified
-- **Failed Verification**: 3 strategies
-- **Fraud Detected**: 2 strategies
-- **Platform Incompatible**: 14 strategy
-
-### Risk Management Analysis
-- **Average Max Drawdown**: 3.51% (well within 50% limit)
-- **Average Trade Count**: 265 trades per strategy
-- **Highest Sharpe Ratio**: 3.86 (jayyx03 #1)
-
----
-
 ## 🔬 DOCKER VERIFICATION PROCESS
 
 All strategies undergo rigorous verification:
@@ -143,11 +128,6 @@ All strategies undergo rigorous verification:
 
 ---
 
-## 🎯 FOR NEW SUBMISSIONS
-
-**Time Remaining**: 16 days to submit
-
----
 
 ## 📝 LESSONS LEARNED
 
@@ -164,6 +144,5 @@ All strategies undergo rigorous verification:
 
 ---
 
-**Last Updated**: November 6, 2025 - NEW LEADER: Qinglei W (+36.10%)
 **Next Update**: Upon new submissions or contest conclusion
 **Contest Administrator**: Platform Team
