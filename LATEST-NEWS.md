@@ -2,6 +2,33 @@
 
 ---
 
+## 📅 **November 11, 2025** - *11 Days Until Contest End*
+
+### 🏆 **MAJOR LEADERBOARD UPDATE: Usman A (Quantum) Claims 3rd Place**
+
+**Leaderboard Update**: Usman A's Quantum Momentum Strategy achieves **3rd place** with +21.33% return. 
+**Previous Usman strategy removed** - participants limited to best submission.
+
+**New Rankings**:
+1. **Qinglei W**: +36.10% (unchanged)
+2. **Edudzi A**: +26.70% (unchanged)
+3. **Usman A (Quantum)**: +21.33% (NEW 3rd place)
+4. **jayyx03**: +20.64% (moved to 4th)
+5. **Wahedul I**: +6.42% (moved to 5th)
+6. **jayyx03 (#2)**: +4.24% (moved to 6th)
+
+**Quantum Strategy Performance**: BTC +19.03% (100% win rate), ETH +23.63% (85.7% win rate), 44 total trades, 15.84% max drawdown. **Advanced multi-indicator confluence** with dynamic position sizing.
+
+### 🚀 **6 New Freelancers Expected Soon**
+
+**Growing Interest**: 6 additional freelancers have declared participation and will submit strategies shortly. Contest momentum building with **11 days remaining** - final push expected as deadline approaches.
+
+### 🚨 **Framework Rejection Pattern Continues**
+
+**Multiple Resubmissions Fail**: Both Abu B. (40% compliance progress) and Saniya (clean mean reversion logic) remain rejected due to persistent API signature incompatibilities. Pattern confirms **technical compliance as critical as performance**.
+
+---
+
 ## 📅 **November 9, 2025** - *13 Days Until Contest End*
 
 ### 🏆 **NEW 2ND PLACE: Edudzi A Achieves +26.70% Return**

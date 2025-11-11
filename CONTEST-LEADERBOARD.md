@@ -1,8 +1,8 @@
 # 🏆 Trading Strategy Contest - Live Leaderboard
 
-**Contest Status**: Active (13 days remaining)
+**Contest Status**: Active (12 days remaining)
 **Prize Pool**: $1,500 USD
-**Last Update**: November 9, 2025
+**Last Update**: November 11, 2025
 
 ---
 
@@ -12,13 +12,13 @@
 |------|-----------|--------|-----|
 | 🥇 **1st** | **Qinglei W** | **+36.10%** | **+$3,610** |
 | 🥈 **2nd** | **Edudzi A** | **+26.70%** | **+$2,670** |
-| 🥉 **3rd** | **jayyx03** | **+20.64%** | **+$2,064** |
-| 4th | **Usman A** | **+7.63%** | **+$763** |
+| 🥉 **3rd** | **Usman A (Quantum)** | **+21.33%** | **+$2,133** |
+| 4th | **jayyx03** | **+20.64%** | **+$2,064** |
 | 5th | **Wahedul I** | **+6.42%** | **+$642** |
 | 6th | **jayyx03** | **+4.24%** | **+$424** |
 
 **To beat current leader**: Need >+36.10% return (>$3,610 profit)
-**To reach podium**: Need >+20.64% return (>$2,064 profit)
+**To reach podium**: Need >+21.33% return (>$2,133 profit)
 
 
 
@@ -63,26 +63,26 @@
 - **Docker Deployment**: ✅ **LIVE CONTAINER VERIFIED**
 - **Status**: ✅ **SOLID 2ND PLACE**
 
-#### 🥉 jayyx03 (#1) - **MOVED TO 3RD PLACE**
+#### 🥉 Usman A (Quantum Momentum) - **NEW 3RD PLACE**
+- **Performance**: Combined: +21.33% (+$2,133)
+- **BTC Performance**: +19.03% (15 trades, 100% win rate)
+- **ETH Performance**: +23.63% (29 trades, 85.7% win rate)
+- **Risk Management**: 15.84% max drawdown (excellent control)
+- **Trading Activity**: 44 total trades with 90.48% win rate
+- **Strategy Type**: Advanced multi-indicator confluence system
+- **Position Sizing**: ✅ **Dynamic 30-55% based on confidence**
+- **Data Compliance**: ✅ **VERIFIED Yahoo Finance hourly usage**
+- **Security Audit**: ✅ **CLEAN**
+- **Platform Compliance**: ✅ **VERIFIED**
+- **Docker Deployment**: ✅ **LIVE CONTAINER VERIFIED**
+- **Status**: ✅ **BREAKTHROUGH PERFORMANCE**
+
+#### 4th - jayyx03 (#1) - **MOVED TO 4TH PLACE**
 - **Performance**: Combined: +20.64% (+$2,064)
 - **Risk Management**: Well-controlled drawdown levels
 - **Trading Activity**: High frequency approach
 - **Docker Verification**: ✅ **FULLY VERIFIED**
 - **Technical Quality**: Excellent implementation
-- **Status**: ✅ **STRONG POSITION**
-
-#### 4th - Usman A (v6) - **MOVED TO 4TH PLACE**
-- **Performance**: Combined: +7.63% (+$763)
-- **Risk Management**: Excellent drawdown control
-- **Trading Activity**: Selective high-quality trades
-- **Win Rate**: High consistency across both assets
-- **Technical Quality**: Professional implementation
-- **Data Source**: ✅ **Contest-compliant**
-- **Transaction Costs**: ✅ **Realistic modeling**
-- **Security Audit**: ✅ **CLEAN**
-- **Platform Compliance**: ✅ **VERIFIED**
-- **Fraud Detection**: ✅ **CLEAN**
-- **Execution Testing**: ✅ **VERIFIED**
 - **Status**: ✅ **STRONG POSITION**
 
 #### 5th - Wahedul I (v2) - **MOVED TO 5TH PLACE**
