@@ -1,6 +1,6 @@
 # 🏆 Trading Strategy Contest - Live Leaderboard
 
-**Contest Status**: Active (12 days remaining)
+**Contest Status**: Active (11 days remaining)
 **Prize Pool**: $1,500 USD
 **Last Update**: November 11, 2025
 
@@ -12,7 +12,7 @@
 |------|-----------|--------|-----|
 | 🥇 **1st** | **Qinglei W** | **+36.10%** | **+$3,610** |
 | 🥈 **2nd** | **Edudzi A** | **+26.70%** | **+$2,670** |
-| 🥉 **3rd** | **Usman A (Quantum)** | **+21.33%** | **+$2,133** |
+| 🥉 **3rd** | **Usman A** | **+21.33%** | **+$2,133** |
 | 4th | **jayyx03** | **+20.64%** | **+$2,064** |
 | 5th | **Wahedul I** | **+6.42%** | **+$642** |
 | 6th | **jayyx03** | **+4.24%** | **+$424** |
@@ -63,7 +63,7 @@
 - **Docker Deployment**: ✅ **LIVE CONTAINER VERIFIED**
 - **Status**: ✅ **SOLID 2ND PLACE**
 
-#### 🥉 Usman A (Quantum Momentum) - **NEW 3RD PLACE**
+#### 🥉 Usman A - **NEW 3RD PLACE**
 - **Performance**: Combined: +21.33% (+$2,133)
 - **BTC Performance**: +19.03% (15 trades, 100% win rate)
 - **ETH Performance**: +23.63% (29 trades, 85.7% win rate)
