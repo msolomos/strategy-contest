@@ -2,6 +2,53 @@
 
 ---
 
+## 📅 **November 17, 2025** - *5 Days Until Contest End*
+
+### 🚨 **SUBMISSION REJECTED: Harsh T. (tanyat29) - Data Verification Failure**
+
+**Major Disqualification**: Harsh T.'s submission claiming **+38.83% return** has been **rejected** after comprehensive audit revealed critical compliance violations:
+
+**Verification Failures**:
+- **Missing Data Files**: Referenced `ETH_USD_2024-01-01_2024-06-30_1h.csv` not provided
+- **Reproducibility Failure**: Backtest returns `FileNotFoundError` - impossible to verify claims
+- **Contest Rule Violations**: Violates rules #75 (data compliance), #93 (missing files), #99 (verification failure)
+
+**Technical Issues**:
+- Strategy parameters mismatch between implementation and backtest configuration
+- No independent verification possible without source data
+- Claims of 38% returns cannot be substantiated
+
+**Status**: ❌ **PERMANENTLY REJECTED** - Contest integrity maintained through rigorous verification process.
+
+### 🚨 **SUBMISSION REJECTED: Abdul L. (masory74) - Strategy Misrepresentation**
+
+**Major Fraud Detection**: Abdul L.'s submission claiming **+43.36% average return** has been **rejected** after detailed audit revealed critical strategy misrepresentation:
+
+**Documentation Fraud**:
+- **Claimed Strategy**: "Momentum + Volatility-Adjusted Hybrid" with moving averages and trend analysis
+- **Actual Implementation**: Simple Dollar Cost Averaging (DCA) strategy
+- **Missing Components**: No moving average calculations, no trend_strength computations, no claimed volatility adjustments
+
+**Technical Violations**:
+- Strategy documentation completely misrepresents actual code implementation
+- Performance claims based on undisclosed DCA approach, not claimed momentum strategy
+- CSV data format issues with malformed headers and volume data inclusion
+
+**Status**: ❌ **PERMANENTLY REJECTED** - Strategy misrepresentation violates contest transparency requirements.
+
+### 🔄 **RESUBMISSION REJECTED: Saniya (SaniyaSuria) - Persistent Framework Violations**
+
+**Third Rejection**: Saniya's resubmission continues to violate core framework requirements despite previous feedback:
+
+**Persistent Issues**:
+- **API Incompatibility**: Still uses `generate_signal(symbol, data)` instead of required `generate_signal(market, portfolio)`
+- **Framework Integration**: Custom runner and BaseStrategy implementation incompatible with contest platform
+- **Execution Failure**: ModuleNotFoundError prevents backtest execution
+
+**Status**: ❌ **PERMANENTLY REJECTED** - No further resubmissions accepted due to repeated violations.
+
+---
+
 ## 📅 **November 11, 2025** - *11 Days Until Contest End*
 
 ### 🏆 **MAJOR LEADERBOARD UPDATE: Usman A (Quantum) Claims 3rd Place**
