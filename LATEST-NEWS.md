@@ -2,6 +2,121 @@
 
 ---
 
+## 📅 **November 22, 2025** - *Final Day*
+
+### 🥉 **NEW 3RD PLACE: Bano S (sbanodev) - Adaptive Trend Fusion Strategy**
+
+**Major Leaderboard Update**: Bano S secures **3rd place** with impressive +22.07% return using sophisticated multi-regime trading system!
+
+**Performance Highlights**:
+- **Combined Return**: +22.07% (+$2,207)
+- **BTC Performance**: +19.19% with 12.22% max drawdown
+- **ETH Performance**: +24.94% with excellent risk control
+- **Strategy**: Adaptive Trend Fusion with Stochastic, ADX, Williams %R indicators
+- **Trading Activity**: 106 trades with 86.5% win rate
+
+**Verification Status**: Passed all security, compliance, and fraud detection checks. Technical implementation verified.
+
+**Impact**: Usman A moves from 3rd to 4th place, all other rankings shift down one position.
+
+---
+
+## 📅 **November 23, 2025** - *Contest Conclusion*
+
+### ❌ **SUBMISSION REJECTED: Abu B. (abubakar1745) - Placeholder Submission**
+
+**Second Rejection**: Abu B.'s resubmission contains no actual strategy implementation:
+
+**Critical Issues**:
+- **Empty Strategy**: File contains only placeholder text "Updated strategy file..."
+- **No Implementation**: Missing BaseStrategy class, generate_signal method, and all contest requirements
+- **Wrong Asset Focus**: Testing framework uses AAPL stock instead of required BTC/ETH crypto
+- **Regression**: Worse than first submission which at least contained some code
+
+**Status**: ❌ **REJECTED - PLACEHOLDER SUBMISSION** - No strategy to evaluate.
+
+### 🥈 **NEW 2ND PLACE: Suhail S. (suhailsiyad0887) - Quantum Momentum Strategy**
+
+**Major Leaderboard Update**: Suhail S. secures **2nd place** with impressive +27.23% return using sophisticated asymmetric dip-buying strategy:
+
+**Performance Highlights**:
+- **Combined Return**: +27.23% (+$2,723)
+- **BTC Performance**: +23.94% with 5 trades, 50% win rate
+- **ETH Performance**: +30.51% with 9 trades, 100% win rate
+- **Risk Management**: 19.68% max drawdown (excellent control)
+- **Strategy**: Quantum Momentum - asymmetric parameters optimized for BTC/ETH volatility profiles
+
+**Verification Status**: ✅ **Comprehensive verification passed** - fraud detection, data manipulation, and contest compliance all verified.
+
+**Leaderboard Impact**: Edudzi A moves to 3rd place, all other rankings shift down one position.
+
+### ✅ **NEW ENTRY: Shadan A. (shadanarif) - Second Submission Accepted**
+
+**Legitimate Strategy**: Shadan A. submits new "Optimized Momentum Strategy" after previous disqualification:
+
+**Performance Highlights**:
+- **Combined Return**: +23.27% (+$2,327)
+- **BTC Performance**: +19.96% with 86.96% win rate
+- **ETH Performance**: +26.58% with 86.96% win rate
+- **Trading Activity**: 94 trades with excellent risk control
+
+**Verification Status**: ✅ All fraud detection, data manipulation, and contest compliance checks passed.
+
+**Leaderboard Impact**: Enters at 6th place between Usman A and Wahedul I.
+
+### 🚨 **RESUBMISSION REJECTED: Harsh T. (tanyat29) - No Corrections Made**
+
+**Second Rejection**: Harsh T.'s "corrected" submission still has **identical issues** from original rejection:
+
+**Unchanged Problems**:
+- **Missing CSV Files**: ETH_USD data files still not provided
+- **Placeholder Backtest**: Runner still outputs "Backtest runner placeholder"
+- **Unverifiable Claims**: +38.83% return still cannot be substantiated
+
+**Status**: ❌ **PERMANENTLY REJECTED** - No actual corrections made despite claims.
+
+### 📈 **STRATEGY UPDATE: Bano S (sbanodev) - Performance Optimization**
+
+**Strategy Enhancement**: Bano S has successfully **optimized** his "Adaptive Trend Fusion Strategy" with improved performance metrics:
+
+**Performance Improvements**:
+- **Combined Return**: +22.07% → **+22.93%** (+0.86 percentage points)
+- **BTC Performance**: +19.19% → **+21.37%** (significant improvement)
+- **ETH Performance**: +24.94% → +24.48% (minor adjustment)
+- **Trading Efficiency**: 106 → 95 trades with higher win rate (86.5% → 87.2%)
+
+**Verification Status**: ✅ All fraud detection checks passed. Legitimate strategy optimization with no suspicious patterns detected.
+
+**Leaderboard Impact**: Maintains **3rd place** with enhanced performance. Updated metrics reflected in standings.
+
+---
+
+## 📅 **November 22, 2025** - *Final Day - Fraud Detection*
+
+### 🚨 **STRATEGY DISQUALIFIED: Shadan A. (shadanarif) - Hindsight Bias Violation**
+
+**Major Fraud Detection**: Shadan A.'s "Adaptive Allocation Trend Strategy" claiming **+27.18% return** with **100% BTC win rate** has been **disqualified** after comprehensive fraud analysis revealed critical overfitting violations:
+
+**Evidence of Hindsight Bias**:
+- **Impossible Statistics**: 100% win rate over 45 BTC trades in highly volatile crypto market
+- **Perfect Market Timing**: Monthly rebalancing strategy "accidentally" exits before every market crash
+- **Statistical Impossibility**: 5 consecutive profitable monthly exits (probability <3%)
+- **Overfitting Pattern**: Strategy optimized specifically for Jan-Jun 2024 data period
+
+**Technical Analysis**:
+- ✅ Code integrity verified (no malicious code)
+- ✅ Platform compliance confirmed
+- ✅ Yahoo Finance data usage validated
+- ❌ **Results exhibit systematic hindsight bias**
+
+**Fraud Classification**: Overfitting/Hindsight Bias - Strategy designed with future knowledge of market movements, making results unreproducible in live trading environments.
+
+**Contest Impact**: This specific strategy and submission have been invalidated due to violation of fair competition principles. Results would be impossible to achieve in real trading conditions.
+
+**Status**: ❌ **STRATEGY DISQUALIFIED** - This entry is void. Participant may submit alternative strategies following contest guidelines.
+
+---
+
 ## 📅 **November 17, 2025** - *5 Days Until Contest End*
 
 ### 🚨 **SUBMISSION REJECTED: Harsh T. (tanyat29) - Data Verification Failure**

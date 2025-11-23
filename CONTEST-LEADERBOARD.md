@@ -1,8 +1,8 @@
 # 🏆 Trading Strategy Contest - Live Leaderboard
 
-**Contest Status**: Active (11 days remaining)
+**Contest Status**: Active (1 day remaining)
 **Prize Pool**: $1,500 USD
-**Last Update**: November 11, 2025
+**Last Update**: November 22, 2025
 
 ---
 
@@ -11,14 +11,17 @@
 | Rank | Developer | Return | PnL |
 |------|-----------|--------|-----|
 | 🥇 **1st** | **Qinglei W** | **+36.10%** | **+$3,610** |
-| 🥈 **2nd** | **Edudzi A** | **+26.70%** | **+$2,670** |
-| 🥉 **3rd** | **Usman A** | **+21.33%** | **+$2,133** |
-| 4th | **jayyx03** | **+20.64%** | **+$2,064** |
-| 5th | **Wahedul I** | **+6.42%** | **+$642** |
-| 6th | **jayyx03** | **+4.24%** | **+$424** |
+| 🥈 **2nd** | **Suhail S** | **+27.23%** | **+$2,723** |
+| 🥉 **3rd** | **Edudzi A** | **+26.70%** | **+$2,670** |
+| 4th | **Bano S** | **+22.93%** | **+$2,293** |
+| 5th | **Shadan A** | **+23.27%** | **+$2,327** |
+| 6th | **Usman A** | **+21.33%** | **+$2,133** |
+| 7th | **jayyx03** | **+20.64%** | **+$2,064** |
+| 8th | **Wahedul I** | **+6.42%** | **+$642** |
+| 9th | **jayyx03** | **+4.24%** | **+$424** |
 
 **To beat current leader**: Need >+36.10% return (>$3,610 profit)
-**To reach podium**: Need >+21.33% return (>$2,133 profit)
+**To reach podium**: Need >+26.70% return (>$2,670 profit)
 
 
 
@@ -50,7 +53,21 @@
 - **Platform Compliance**: ✅ **VERIFIED**
 - **Status**: ✅ **COMMANDING LEAD**
 
-#### 🥈 Edudzi A (Buy-Hold Maximizer) - **NEW 2ND PLACE**
+#### 🥈 Suhail S - **NEW 2ND PLACE**
+- **Performance**: Combined: +27.23% (+$2,723)
+- **BTC Performance**: +23.94% (5 trades, 50% win rate)
+- **ETH Performance**: +30.51% (9 trades, 100% win rate)
+- **Risk Management**: 19.68% max drawdown (excellent control)
+- **Trading Activity**: 14 total trades with 83.3% win rate
+- **Strategy Type**: Quantum Momentum - Asymmetric dip-buying with trailing stops
+- **Position Sizing**: ✅ **55% compliant (contest maximum)**
+- **Data Compliance**: ✅ **VERIFIED Yahoo Finance hourly usage**
+- **Security Audit**: ✅ **CLEAN**
+- **Platform Compliance**: ✅ **VERIFIED**
+- **Fraud Detection**: ✅ **COMPREHENSIVE VERIFICATION PASSED**
+- **Status**: ✅ **VERIFIED 2ND PLACE**
+
+#### 🥉 Edudzi A (Buy-Hold Maximizer) - **MOVED TO 3RD PLACE**
 - **Performance**: Combined: +26.70% (+$2,670)
 - **BTC Performance**: +26.41% with 12.55% max drawdown
 - **ETH Performance**: +27.00% with 17.02% max drawdown
@@ -61,9 +78,36 @@
 - **Platform Compliance**: ✅ **VERIFIED**
 - **Data Compliance**: ✅ **VERIFIED Yahoo Finance hourly**
 - **Docker Deployment**: ✅ **LIVE CONTAINER VERIFIED**
-- **Status**: ✅ **SOLID 2ND PLACE**
+- **Status**: ✅ **STRONG 3RD PLACE**
 
-#### 🥉 Usman A - **NEW 3RD PLACE**
+#### 4th - Bano S - **MOVED TO 4TH PLACE**
+- **Performance**: Combined: +22.93% (+$2,293)
+- **BTC Performance**: +21.37% (46 trades, 82.6% win rate)
+- **ETH Performance**: +24.48% (49 trades, 91.7% win rate)
+- **Risk Management**: 12.54% max drawdown (excellent control)
+- **Trading Activity**: 95 total trades with 87.2% win rate
+- **Strategy Type**: Adaptive Trend Fusion with multi-regime detection
+- **Position Sizing**: ✅ **Dynamic regime-based up to 55%**
+- **Data Compliance**: ✅ **VERIFIED Yahoo Finance hourly usage**
+- **Security Audit**: ✅ **CLEAN**
+- **Platform Compliance**: ✅ **VERIFIED**
+- **Docker Deployment**: ✅ **VERIFIED**
+- **Status**: ✅ **STRONG 4TH PLACE**
+
+#### 5th - Shadan A - **MOVED TO 5TH PLACE**
+- **Performance**: Combined: +23.27% (+$2,327)
+- **BTC Performance**: +19.96% (47 trades, 86.96% win rate)
+- **ETH Performance**: +26.58% (47 trades, 86.96% win rate)
+- **Risk Management**: 18.19% max drawdown (excellent control)
+- **Trading Activity**: 94 total trades with 86.96% win rate
+- **Strategy Type**: Optimized Momentum with multi-indicator confluence
+- **Position Sizing**: ✅ **Compliant up to 55%**
+- **Data Compliance**: ✅ **VERIFIED Yahoo Finance hourly usage**
+- **Security Audit**: ✅ **CLEAN**
+- **Platform Compliance**: ✅ **VERIFIED**
+- **Status**: ✅ **VERIFIED PROFITABLE**
+
+#### 6th - Usman A - **MOVED TO 6TH PLACE**
 - **Performance**: Combined: +21.33% (+$2,133)
 - **BTC Performance**: +19.03% (15 trades, 100% win rate)
 - **ETH Performance**: +23.63% (29 trades, 85.7% win rate)
@@ -77,7 +121,7 @@
 - **Docker Deployment**: ✅ **LIVE CONTAINER VERIFIED**
 - **Status**: ✅ **BREAKTHROUGH PERFORMANCE**
 
-#### 4th - jayyx03 (#1) - **MOVED TO 4TH PLACE**
+#### 7th - jayyx03 (#1) - **MOVED TO 7TH PLACE**
 - **Performance**: Combined: +20.64% (+$2,064)
 - **Risk Management**: Well-controlled drawdown levels
 - **Trading Activity**: High frequency approach
@@ -85,19 +129,43 @@
 - **Technical Quality**: Excellent implementation
 - **Status**: ✅ **STRONG POSITION**
 
-#### 5th - Wahedul I (v2) - **MOVED TO 5TH PLACE**
+#### 8th - Wahedul I (v2) - **MOVED TO 8TH PLACE**
 - **Performance**: Combined: +6.42% (+$642)
 - **Risk Management**: Conservative drawdown approach
 - **Trading Approach**: Systematic position management
 - **Security Audit**: ✅ **CLEAN**
 - **Status**: ✅ **VIABLE POSITION**
 
-#### 6th - jayyx03 (#2) - **MOVED TO 6TH PLACE**
+#### 9th - jayyx03 (#2) - **MOVED TO 9TH PLACE**
 - **Performance**: +4.24% (+$424)
 - **Technical Quality**: Good implementation
 - **Status**: ✅ **COMPETITIVE POSITION**
 
 ### ❌ REJECTED SUBMISSIONS
+
+#### Harsh T. (tanyat29) - **RESUBMISSION REJECTED**
+- **Claims**: +38.83% return (corrected submission)
+- **Issues**: Missing CSV files, placeholder backtest runner
+- **Evidence**: No corrections made from original rejection
+- **Status**: ❌ **PERMANENTLY REJECTED**
+
+#### Abu B. (abubakar1745) - **PLACEHOLDER SUBMISSION**
+- **Claims**: Second submission with improved strategy
+- **Issues**: Empty strategy file with only placeholder text, no implementation provided
+- **Evidence**: File contains only "Updated strategy file..." comment, missing all contest requirements
+- **Status**: ❌ **REJECTED - PLACEHOLDER SUBMISSION**
+
+#### Suhail S. (suhailsiyad0887) - First Submission - **FRAMEWORK INCOMPATIBLE**
+- **Claims**: Golden Pyramid Strategy with +43.05% return
+- **Issues**: API signature violations, position sizing exceeds 55%, missing infrastructure
+- **Evidence**: TypeError on Signal object, custom dual_market framework
+- **Status**: ❌ **REJECTED - FRAMEWORK INCOMPATIBLE**
+
+#### 🚨 FRAUD DETECTED: Shadan A. (shadanarif) - First Submission
+- **Claims**: +27.18% return with 100% BTC win rate
+- **Issues**: Hindsight bias, statistical impossibility
+- **Evidence**: Perfect market timing, overfitting violations
+- **Status**: ❌ **DISQUALIFIED - FRAUD DETECTED**
 
 #### 🚨 FRAUD DETECTED: Previous Submission v5
 - **Claims**: Unrealistic performance claims
