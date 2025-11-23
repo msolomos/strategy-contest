@@ -2,25 +2,6 @@
 
 ---
 
-## 📅 **November 22, 2025** - *Final Day*
-
-### 🥉 **NEW 3RD PLACE: Bano S (sbanodev) - Adaptive Trend Fusion Strategy**
-
-**Major Leaderboard Update**: Bano S secures **3rd place** with impressive +22.07% return using sophisticated multi-regime trading system!
-
-**Performance Highlights**:
-- **Combined Return**: +22.07% (+$2,207)
-- **BTC Performance**: +19.19% with 12.22% max drawdown
-- **ETH Performance**: +24.94% with excellent risk control
-- **Strategy**: Adaptive Trend Fusion with Stochastic, ADX, Williams %R indicators
-- **Trading Activity**: 106 trades with 86.5% win rate
-
-**Verification Status**: Passed all security, compliance, and fraud detection checks. Technical implementation verified.
-
-**Impact**: Usman A moves from 3rd to 4th place, all other rankings shift down one position.
-
----
-
 ## 📅 **November 23, 2025** - *Contest Conclusion*
 
 ### 🏁 **FINAL EVALUATION STAGE - 11 SUBMISSIONS ADVANCE**
@@ -58,6 +39,25 @@ The final results will be announced within the next 2–3 days.
 - **Regression**: Worse than first submission which at least contained some code
 
 **Status**: ❌ **REJECTED - PLACEHOLDER SUBMISSION** - No strategy to evaluate.
+
+---
+
+## 📅 **November 22, 2025** - *Final Day*
+
+### 🥉 **NEW 3RD PLACE: Bano S (sbanodev) - Adaptive Trend Fusion Strategy**
+
+**Major Leaderboard Update**: Bano S secures **3rd place** with impressive +22.07% return using sophisticated multi-regime trading system!
+
+**Performance Highlights**:
+- **Combined Return**: +22.07% (+$2,207)
+- **BTC Performance**: +19.19% with 12.22% max drawdown
+- **ETH Performance**: +24.94% with excellent risk control
+- **Strategy**: Adaptive Trend Fusion with Stochastic, ADX, Williams %R indicators
+- **Trading Activity**: 106 trades with 86.5% win rate
+
+**Verification Status**: Passed all security, compliance, and fraud detection checks. Technical implementation verified.
+
+**Impact**: Usman A moves from 3rd to 4th place, all other rankings shift down one position.
 
 ### 🥈 **NEW 2ND PLACE: Suhail S. (suhailsiyad0887) - Quantum Momentum Strategy**
 
@@ -112,10 +112,6 @@ The final results will be announced within the next 2–3 days.
 **Verification Status**: ✅ All fraud detection checks passed. Legitimate strategy optimization with no suspicious patterns detected.
 
 **Leaderboard Impact**: Maintains **3rd place** with enhanced performance. Updated metrics reflected in standings.
-
----
-
-## 📅 **November 22, 2025** - *Final Day - Fraud Detection*
 
 ### 🚨 **STRATEGY DISQUALIFIED: Shadan A. (shadanarif) - Hindsight Bias Violation**
 
