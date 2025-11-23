@@ -23,6 +23,30 @@
 
 ## 📅 **November 23, 2025** - *Contest Conclusion*
 
+### 🏁 **FINAL EVALUATION STAGE - 11 SUBMISSIONS ADVANCE**
+
+We have narrowed down the entries to 11 final submissions, which will be reviewed one last time before we announce the final results.
+
+The participants who have advanced to the final stage of the contest are:
+
+#154 - Qinglei W. @mengw3
+#169 - Edudzi A. @aedudzimakafui22
+#138 - Usman A. @usman212285
+#36 - Jay J. @jayyx03
+#141 - Jay J. @jayyx03 (2nd submission)
+#142 - Wahedul I. @Adnan777
+#185 - Wahedul I. @Adnan777 (2nd submission)
+#219 - Bano S. @sbanodev
+#208 - Bano S. @sbanodev (2nd submission)
+#205 - Shadan A. @shadanarif
+#198 - Suhail S. @suhailsiyad0887
+
+We need a little more time to complete these final evaluations, in accordance with the contest rules.
+
+The final results will be announced within the next 2–3 days.
+
+---
+
 ### ❌ **SUBMISSION REJECTED: Abu B. (abubakar1745) - Placeholder Submission**
 
 **Second Rejection**: Abu B.'s resubmission contains no actual strategy implementation:
