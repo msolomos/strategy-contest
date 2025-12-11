@@ -13,7 +13,7 @@
     "constructor_compliance": true,
     "required_files_found": 8,
     "required_files_total": 8,
-    "scan_timestamp": "2025-12-11T01:40:19.975266"
+    "scan_timestamp": "2025-12-11T16:32:39.062917"
   },
   {
     "submission_id": "#141",
@@ -29,7 +29,7 @@
     "constructor_compliance": true,
     "required_files_found": 8,
     "required_files_total": 8,
-    "scan_timestamp": "2025-12-11T01:40:19.998320"
+    "scan_timestamp": "2025-12-11T16:32:39.073564"
   },
   {
     "submission_id": "#142",
@@ -45,7 +45,7 @@
     "constructor_compliance": true,
     "required_files_found": 8,
     "required_files_total": 8,
-    "scan_timestamp": "2025-12-11T01:40:20.240177"
+    "scan_timestamp": "2025-12-11T16:32:39.233088"
   },
   {
     "submission_id": "#154",
@@ -80,7 +80,7 @@
     "constructor_compliance": true,
     "required_files_found": 6,
     "required_files_total": 8,
-    "scan_timestamp": "2025-12-11T01:40:20.646328"
+    "scan_timestamp": "2025-12-11T16:32:39.520731"
   },
   {
     "submission_id": "#169",
@@ -106,7 +106,7 @@
     "constructor_compliance": true,
     "required_files_found": 7,
     "required_files_total": 8,
-    "scan_timestamp": "2025-12-11T01:40:20.906222"
+    "scan_timestamp": "2025-12-11T16:32:39.527734"
   },
   {
     "submission_id": "#185",
@@ -122,7 +122,7 @@
     "constructor_compliance": true,
     "required_files_found": 8,
     "required_files_total": 8,
-    "scan_timestamp": "2025-12-11T01:40:21.063416"
+    "scan_timestamp": "2025-12-11T16:32:39.688022"
   },
   {
     "submission_id": "#198",
@@ -138,23 +138,42 @@
     "constructor_compliance": true,
     "required_files_found": 8,
     "required_files_total": 8,
-    "scan_timestamp": "2025-12-11T01:40:21.068415"
+    "scan_timestamp": "2025-12-11T16:32:39.699609"
   },
   {
     "submission_id": "#205",
     "participant": "Unknown",
-    "passed": true,
-    "compliance_score": 100.0,
-    "issues": [],
-    "required_structure_compliance": true,
+    "passed": false,
+    "compliance_score": 65.0,
+    "issues": [
+      {
+        "severity": "CRITICAL",
+        "category": "Missing Required File",
+        "description": "Required file missing: reports/backtest_runner.py",
+        "file_path": "reports/backtest_runner.py",
+        "line_number": null,
+        "code_snippet": null,
+        "recommendation": "Create reports/backtest_runner.py exactly as specified in contest requirements"
+      },
+      {
+        "severity": "HIGH",
+        "category": "Missing Required File",
+        "description": "Required file missing: reports/backtest_report.md",
+        "file_path": "reports/backtest_report.md",
+        "line_number": null,
+        "code_snippet": null,
+        "recommendation": "Create reports/backtest_report.md exactly as specified in contest requirements"
+      }
+    ],
+    "required_structure_compliance": false,
     "base_strategy_inheritance": true,
     "generate_signal_method": true,
     "signal_class_usage": true,
     "strategy_registration": true,
     "constructor_compliance": true,
-    "required_files_found": 8,
+    "required_files_found": 6,
     "required_files_total": 8,
-    "scan_timestamp": "2025-12-11T01:40:21.076417"
+    "scan_timestamp": "2025-12-11T16:32:56.311364"
   },
   {
     "submission_id": "#208",
@@ -180,7 +199,7 @@
     "constructor_compliance": true,
     "required_files_found": 7,
     "required_files_total": 8,
-    "scan_timestamp": "2025-12-11T01:40:28.727358"
+    "scan_timestamp": "2025-12-11T16:33:05.778844"
   },
   {
     "submission_id": "#219",
@@ -206,7 +225,7 @@
     "constructor_compliance": true,
     "required_files_found": 7,
     "required_files_total": 8,
-    "scan_timestamp": "2025-12-11T01:40:36.568644"
+    "scan_timestamp": "2025-12-11T16:33:15.372076"
   },
   {
     "submission_id": "#36",
@@ -222,6 +241,6 @@
     "constructor_compliance": true,
     "required_files_found": 8,
     "required_files_total": 8,
-    "scan_timestamp": "2025-12-11T01:40:36.591237"
+    "scan_timestamp": "2025-12-11T16:33:15.395079"
   }
 ]

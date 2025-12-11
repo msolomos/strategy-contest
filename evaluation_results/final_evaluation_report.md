@@ -1,30 +1,37 @@
 # Contest Evaluation Report
 
-**Generated:** 2025-12-11 01:40:54 UTC
+**Generated:** 2025-12-11 16:33:18 UTC
 **Total Submissions:** 11
-**Passed All Stages:** 9/11
+**Passed All Stages:** 8/11
 
 ## Executive Summary
 
-✅ **9 out of 11 submissions passed** all evaluation stages.
+✅ **8 out of 11 submissions passed** all evaluation stages.
 
 ## Final Rankings
 
 | Rank | Submission | Participant | Overall Score | Status | Security | Compliance | Data | Rules |
 |------|------------|-------------|---------------|--------|----------|------------|------|-------|
 | 1 | #36 | Unknown | 100.0/100 | ✅ PASS | 100.0 | 100.0 | 100.0 | 100.0 |
-| 2 | #205 | Unknown | 97.9/100 | ✅ PASS | 93.0 | 100.0 | 100.0 | 100.0 |
-| 3 | #198 | Unknown | 97.9/100 | ✅ PASS | 93.0 | 100.0 | 100.0 | 100.0 |
-| 4 | #141 | Unknown | 97.0/100 | ✅ PASS | 100.0 | 100.0 | 100.0 | 85.0 |
-| 5 | #169 | Unknown | 95.3/100 | ✅ PASS | 86.0 | 98.0 | 100.0 | 100.0 |
-| 6 | #154 | Unknown | 93.5/100 | ✅ PASS | 86.0 | 93.0 | 100.0 | 97.0 |
-| 7 | #138 | Unknown | 93.3/100 | ✅ PASS | 81.0 | 100.0 | 100.0 | 95.0 |
-| 8 | #219 | Unknown | 92.9/100 | ✅ PASS | 88.0 | 98.0 | 100.0 | 85.0 |
-| 9 | #208 | Unknown | 92.9/100 | ✅ PASS | 88.0 | 98.0 | 100.0 | 85.0 |
+| 2 | #198 | Unknown | 97.9/100 | ✅ PASS | 93.0 | 100.0 | 100.0 | 100.0 |
+| 3 | #141 | Unknown | 97.0/100 | ✅ PASS | 100.0 | 100.0 | 100.0 | 85.0 |
+| 4 | #169 | Unknown | 96.1/100 | ✅ PASS | 94.0 | 98.0 | 100.0 | 92.0 |
+| 5 | #154 | Unknown | 93.5/100 | ✅ PASS | 86.0 | 93.0 | 100.0 | 97.0 |
+| 6 | #138 | Unknown | 93.3/100 | ✅ PASS | 81.0 | 100.0 | 100.0 | 95.0 |
+| 7 | #219 | Unknown | 92.9/100 | ✅ PASS | 88.0 | 98.0 | 100.0 | 85.0 |
+| 8 | #208 | Unknown | 92.9/100 | ✅ PASS | 88.0 | 98.0 | 100.0 | 85.0 |
+| 9 | #185 | Unknown | 50.5/100 | ❌ FAIL | 85.0 | 100.0 | 0.0 | 0.0 |
 | 10 | #142 | Unknown | 50.5/100 | ❌ FAIL | 85.0 | 100.0 | 0.0 | 0.0 |
-| 11 | #185 | Unknown | 50.5/100 | ❌ FAIL | 85.0 | 100.0 | 0.0 | 0.0 |
+| 11 | #205 | Unknown | 43.0/100 | ❌ FAIL | 89.0 | 65.0 | 0.0 | 0.0 |
 
 ## Failed Submissions - Issue Details
+
+### #185 (Unknown)
+Overall Score: 50.5/100
+
+**Issues:**
+- Data Integrity: Failed (0.0/100)
+- Contest Rules: Failed (0.0/100)
 
 ### #142 (Unknown)
 Overall Score: 50.5/100
@@ -33,10 +40,11 @@ Overall Score: 50.5/100
 - Data Integrity: Failed (0.0/100)
 - Contest Rules: Failed (0.0/100)
 
-### #185 (Unknown)
-Overall Score: 50.5/100
+### #205 (Unknown)
+Overall Score: 43.0/100
 
 **Issues:**
+- Compliance: Failed (65.0/100)
 - Data Integrity: Failed (0.0/100)
 - Contest Rules: Failed (0.0/100)
 

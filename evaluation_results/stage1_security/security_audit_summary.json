@@ -10,7 +10,7 @@
     "low_issues": 4,
     "total_issues": 7,
     "files_scanned": 4,
-    "scan_timestamp": "2025-12-11T01:40:13.668437"
+    "scan_timestamp": "2025-12-11T16:32:34.753337"
   },
   {
     "submission_id": "#141",
@@ -23,7 +23,7 @@
     "low_issues": 0,
     "total_issues": 0,
     "files_scanned": 3,
-    "scan_timestamp": "2025-12-11T01:40:13.697019"
+    "scan_timestamp": "2025-12-11T16:32:34.800982"
   },
   {
     "submission_id": "#142",
@@ -36,7 +36,7 @@
     "low_issues": 0,
     "total_issues": 3,
     "files_scanned": 3,
-    "scan_timestamp": "2025-12-11T01:40:13.747391"
+    "scan_timestamp": "2025-12-11T16:32:34.905689"
   },
   {
     "submission_id": "#154",
@@ -49,20 +49,20 @@
     "low_issues": 4,
     "total_issues": 6,
     "files_scanned": 4,
-    "scan_timestamp": "2025-12-11T01:40:13.801068"
+    "scan_timestamp": "2025-12-11T16:32:34.970706"
   },
   {
     "submission_id": "#169",
     "participant": "Unknown",
-    "security_score": 86.0,
+    "security_score": 94.0,
     "passed": true,
     "critical_issues": 0,
     "high_issues": 0,
-    "medium_issues": 2,
-    "low_issues": 4,
-    "total_issues": 6,
-    "files_scanned": 4,
-    "scan_timestamp": "2025-12-11T01:40:13.863622"
+    "medium_issues": 1,
+    "low_issues": 1,
+    "total_issues": 2,
+    "files_scanned": 3,
+    "scan_timestamp": "2025-12-11T16:32:35.009287"
   },
   {
     "submission_id": "#185",
@@ -75,7 +75,7 @@
     "low_issues": 0,
     "total_issues": 3,
     "files_scanned": 3,
-    "scan_timestamp": "2025-12-11T01:40:13.954567"
+    "scan_timestamp": "2025-12-11T16:32:35.066266"
   },
   {
     "submission_id": "#198",
@@ -88,20 +88,20 @@
     "low_issues": 2,
     "total_issues": 3,
     "files_scanned": 3,
-    "scan_timestamp": "2025-12-11T01:40:14.044294"
+    "scan_timestamp": "2025-12-11T16:32:35.134686"
   },
   {
     "submission_id": "#205",
     "participant": "Unknown",
-    "security_score": 93.0,
+    "security_score": 89.0,
     "passed": true,
     "critical_issues": 0,
     "high_issues": 0,
     "medium_issues": 1,
-    "low_issues": 2,
-    "total_issues": 3,
-    "files_scanned": 3,
-    "scan_timestamp": "2025-12-11T01:40:14.102422"
+    "low_issues": 6,
+    "total_issues": 7,
+    "files_scanned": 7,
+    "scan_timestamp": "2025-12-11T16:32:35.320186"
   },
   {
     "submission_id": "#208",
@@ -114,7 +114,7 @@
     "low_issues": 2,
     "total_issues": 4,
     "files_scanned": 3,
-    "scan_timestamp": "2025-12-11T01:40:14.163572"
+    "scan_timestamp": "2025-12-11T16:32:35.436678"
   },
   {
     "submission_id": "#219",
@@ -127,7 +127,7 @@
     "low_issues": 2,
     "total_issues": 4,
     "files_scanned": 3,
-    "scan_timestamp": "2025-12-11T01:40:14.229341"
+    "scan_timestamp": "2025-12-11T16:32:35.535741"
   },
   {
     "submission_id": "#36",
@@ -140,6 +140,6 @@
     "low_issues": 0,
     "total_issues": 0,
     "files_scanned": 4,
-    "scan_timestamp": "2025-12-11T01:40:14.290435"
+    "scan_timestamp": "2025-12-11T16:32:35.600525"
   }
 ]

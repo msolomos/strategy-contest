@@ -90,7 +90,7 @@
     "submission_id": "#169",
     "participant": "Unknown",
     "passed": true,
-    "rules_score": 100.0,
+    "rules_score": 92.0,
     "violations": [
       {
         "severity": "MEDIUM",
@@ -98,6 +98,15 @@
         "description": "Sharpe ratio of 68.00 appears unrealistic",
         "file_path": "performance metrics",
         "recommendation": "Verify Sharpe ratio calculation methodology",
+        "metric_value": null,
+        "threshold": null
+      },
+      {
+        "severity": "HIGH",
+        "category": "Missing Required Data Source",
+        "description": "No yfinance usage detected - verify Yahoo Finance compliance",
+        "file_path": "strategy files",
+        "recommendation": "Ensure yfinance library is used for market data access",
         "metric_value": null,
         "threshold": null
       }
@@ -117,25 +126,6 @@
   },
   {
     "submission_id": "#198",
-    "participant": "Unknown",
-    "passed": true,
-    "rules_score": 100.0,
-    "violations": [],
-    "total_pnl": 2394.0,
-    "total_return": 23.94,
-    "max_drawdown": 16.12,
-    "sharpe_ratio": 1.27,
-    "total_trades": 14,
-    "win_rate": 50.0,
-    "folder_structure_valid": true,
-    "backtest_report_present": true,
-    "required_files_present": true,
-    "starting_capital_compliant": true,
-    "trading_period_compliant": true,
-    "assets_compliant": true
-  },
-  {
-    "submission_id": "#205",
     "participant": "Unknown",
     "passed": true,
     "rules_score": 100.0,

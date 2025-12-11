@@ -11,7 +11,7 @@
     "suspicious_timestamps": false,
     "unrealistic_data_patterns": false,
     "non_market_hours_trading": false,
-    "scan_timestamp": "2025-12-11T01:40:42.310256"
+    "scan_timestamp": "2025-12-11T16:33:16.197263"
   },
   {
     "submission_id": "#141",
@@ -25,7 +25,7 @@
     "suspicious_timestamps": false,
     "unrealistic_data_patterns": false,
     "non_market_hours_trading": false,
-    "scan_timestamp": "2025-12-11T01:40:42.376568"
+    "scan_timestamp": "2025-12-11T16:33:16.250144"
   },
   {
     "submission_id": "#142",
@@ -121,7 +121,7 @@
     "suspicious_timestamps": false,
     "unrealistic_data_patterns": false,
     "non_market_hours_trading": false,
-    "scan_timestamp": "2025-12-11T01:40:42.415342"
+    "scan_timestamp": "2025-12-11T16:33:16.300715"
   },
   {
     "submission_id": "#154",
@@ -135,7 +135,7 @@
     "suspicious_timestamps": false,
     "unrealistic_data_patterns": false,
     "non_market_hours_trading": false,
-    "scan_timestamp": "2025-12-11T01:40:42.462541"
+    "scan_timestamp": "2025-12-11T16:33:16.379857"
   },
   {
     "submission_id": "#169",
@@ -149,7 +149,7 @@
     "suspicious_timestamps": false,
     "unrealistic_data_patterns": false,
     "non_market_hours_trading": false,
-    "scan_timestamp": "2025-12-11T01:40:42.514814"
+    "scan_timestamp": "2025-12-11T16:33:16.422873"
   },
   {
     "submission_id": "#185",
@@ -245,7 +245,7 @@
     "suspicious_timestamps": false,
     "unrealistic_data_patterns": false,
     "non_market_hours_trading": false,
-    "scan_timestamp": "2025-12-11T01:40:42.552023"
+    "scan_timestamp": "2025-12-11T16:33:16.509460"
   },
   {
     "submission_id": "#198",
@@ -259,21 +259,7 @@
     "suspicious_timestamps": false,
     "unrealistic_data_patterns": false,
     "non_market_hours_trading": false,
-    "scan_timestamp": "2025-12-11T01:40:42.612564"
-  },
-  {
-    "submission_id": "#205",
-    "participant": "Unknown",
-    "passed": true,
-    "integrity_score": 100.0,
-    "issues": [],
-    "hardcoded_data_detected": false,
-    "synthetic_data_detected": false,
-    "hindsight_bias_detected": false,
-    "suspicious_timestamps": false,
-    "unrealistic_data_patterns": false,
-    "non_market_hours_trading": false,
-    "scan_timestamp": "2025-12-11T01:40:42.660709"
+    "scan_timestamp": "2025-12-11T16:33:16.618595"
   },
   {
     "submission_id": "#208",
@@ -287,7 +273,7 @@
     "suspicious_timestamps": false,
     "unrealistic_data_patterns": false,
     "non_market_hours_trading": false,
-    "scan_timestamp": "2025-12-11T01:40:42.730919"
+    "scan_timestamp": "2025-12-11T16:33:16.727725"
   },
   {
     "submission_id": "#219",
@@ -301,7 +287,7 @@
     "suspicious_timestamps": false,
     "unrealistic_data_patterns": false,
     "non_market_hours_trading": false,
-    "scan_timestamp": "2025-12-11T01:40:42.790619"
+    "scan_timestamp": "2025-12-11T16:33:16.814139"
   },
   {
     "submission_id": "#36",
@@ -315,6 +301,6 @@
     "suspicious_timestamps": false,
     "unrealistic_data_patterns": false,
     "non_market_hours_trading": false,
-    "scan_timestamp": "2025-12-11T01:40:42.856769"
+    "scan_timestamp": "2025-12-11T16:33:16.896343"
   }
 ]

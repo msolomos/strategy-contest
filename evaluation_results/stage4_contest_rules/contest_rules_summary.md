@@ -1,23 +1,22 @@
 # Contest Rules Verification Report
 
-**Generated:** 2025-12-11 01:40:47 UTC
-**Total Submissions:** 9
-**Passed Rules Check:** 9/9
+**Generated:** 2025-12-11 16:33:17 UTC
+**Total Submissions:** 8
+**Passed Rules Check:** 8/8
 
 ## Summary
 
-✅ **9 submissions passed** contest rules verification.
+✅ **8 submissions passed** contest rules verification.
 
 ## Results by Submission
 
 | Submission | Participant | Status | Score | PnL | Return | Drawdown | Trades |
 |------------|-------------|--------|-------|-----|--------|----------|--------|
-| #169 | Unknown | ✅ PASS | 100.0/100 | $3610 | 36.1% | 26.2% | 68 |
 | #198 | Unknown | ✅ PASS | 100.0/100 | $2394 | 23.9% | 16.1% | 14 |
-| #205 | Unknown | ✅ PASS | 100.0/100 | $2394 | 23.9% | 16.1% | 14 |
 | #36 | Unknown | ✅ PASS | 100.0/100 | $322 | 3.2% | 6.0% | 10 |
 | #154 | Unknown | ✅ PASS | 97.0/100 | $7300 | 73.0% | 27.4% | N/A |
 | #138 | Unknown | ✅ PASS | 95.0/100 | $3610 | 36.1% | 26.2% | N/A |
+| #169 | Unknown | ✅ PASS | 92.0/100 | $3610 | 36.1% | 26.2% | 68 |
 | #141 | Unknown | ✅ PASS | 85.0/100 | N/A | N/A | N/A | N/A |
 | #208 | Unknown | ✅ PASS | 85.0/100 | $1000 | 10.0% | N/A | 10 |
 | #219 | Unknown | ✅ PASS | 85.0/100 | $1000 | 10.0% | N/A | 10 |

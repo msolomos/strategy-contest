@@ -13,13 +13,12 @@
 |------|-------|-----------|----------|----------|--------|------------|------------|--------|
 | 🥇 1st | **#141** | **$3,566.73** | **35.67%** | 19.48% | 117 | 39.87% | 31.47% | ✅ QUALIFIED |
 | 🥈 2nd | #154 | $3,505.17 | 35.05% | 26.15% | 66 | 42.50% | 27.60% | ✅ QUALIFIED |
-| 🥈 2nd | #169 | $3,505.17 | 35.05% | 26.15% | 66 | 42.50% | 27.60% | ✅ QUALIFIED |
-| 🥉 4th | #198 | $2,722.72 | 27.23% | 19.68% | 14 | 23.94% | 30.51% | ✅ QUALIFIED |
-| 🥉 4th | #205 | $2,722.72 | 27.23% | 19.68% | 14 | 23.94% | 30.51% | ✅ QUALIFIED |
-| 6th | #138 | $2,132.90 | 21.33% | 15.84% | 44 | 19.03% | 23.63% | ✅ COMPLETED |
-| 7th | #36 | $322.20 | 3.22% | 5.99% | 124 | 5.74% | 0.71% | ✅ QUALIFIED |
-| 8th | #219 | $89.70 | 0.90% | 18.70% | 228 | -0.46% | 2.25% | ✅ COMPLETED |
-| 9th | #208 | $9.47 | 0.09% | 17.84% | 205 | 0.91% | -0.72% | ✅ COMPLETED |
+| 🥉 3rd | #198 | $2,722.72 | 27.23% | 19.68% | 14 | 23.94% | 30.51% | ✅ QUALIFIED |
+| 4th | #138 | $2,132.90 | 21.33% | 15.84% | 44 | 19.03% | 23.63% | ✅ QUALIFIED |
+| 5th | #169 | $1,772.88 | 17.73% | 18.21% | 30 | 13.27% | 22.19% | ✅ QUALIFIED |
+| 6th | #36 | $322.20 | 3.22% | 5.99% | 124 | 5.74% | 0.71% | ✅ QUALIFIED |
+| 7th | #219 | $89.70 | 0.90% | 18.70% | 228 | -0.46% | 2.25% | ✅ COMPLETED |
+| 8th | #208 | $9.47 | 0.09% | 17.84% | 205 | 0.91% | -0.72% | ✅ COMPLETED |
 
 ---
 
@@ -42,7 +41,7 @@
 
 ## 📊 CONTEST COMPLIANCE SUMMARY
 
-**All 9 entries met basic contest requirements:**
+**All 8 qualified entries met basic contest requirements:**
 ✅ Starting capital: $10,000 total
 ✅ Data source: Yahoo Finance hourly data
 ✅ Trading period: Jan-Jun 2024
@@ -51,9 +50,10 @@
 ✅ Maximum position size: ≤55%
 
 **Performance Distribution:**
-- **Top Tier (>30% return):** 4 entries (#141, #154, #169)
-- **Mid Tier (20-30% return):** 3 entries (#198, #205, #138)
-- **Lower Tier (<10% return):** 2 entries (#36, #219, #208)
+- **Top Tier (>30% return):** 2 entries (#141, #154)
+- **Mid Tier (20-30% return):** 1 entry (#198)
+- **Lower Tier (10-20% return):** 2 entries (#138, #169)
+- **Minimal Tier (<10% return):** 3 entries (#36, #219, #208)
 
 ---
 
@@ -73,5 +73,16 @@
 
 ---
 
+## ⚠️ DISQUALIFIED ENTRIES
+
+**Entry #205 - DISQUALIFIED**
+- **Reason:** Technical failure during backtest execution (infinite loop in strategy code)
+- **Status:** Passed security/compliance stages but unable to generate valid backtest results
+- **Note:** Previously reported results were erroneously copied from Entry #198
+- **Final Status:** DISQUALIFIED - Invalid submission
+
+---
+
 *Contest concluded December 11, 2025*
 *All results verified with standardized backtest parameters*
+*Entry #205 disqualified due to technical execution failure*

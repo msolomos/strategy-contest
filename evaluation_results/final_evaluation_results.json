@@ -13,23 +13,7 @@
     "overall_score": 100.0,
     "final_status": "PASS",
     "issues": [],
-    "evaluation_timestamp": "2025-12-11T01:40:54.435281"
-  },
-  {
-    "submission_id": "#205",
-    "participant": "Unknown",
-    "security_passed": true,
-    "security_score": 93.0,
-    "compliance_passed": true,
-    "compliance_score": 100.0,
-    "data_integrity_passed": true,
-    "data_integrity_score": 100.0,
-    "contest_rules_passed": true,
-    "contest_rules_score": 100.0,
-    "overall_score": 97.9,
-    "final_status": "PASS",
-    "issues": [],
-    "evaluation_timestamp": "2025-12-11T01:40:54.435281"
+    "evaluation_timestamp": "2025-12-11T16:33:18.024438"
   },
   {
     "submission_id": "#198",
@@ -45,7 +29,7 @@
     "overall_score": 97.9,
     "final_status": "PASS",
     "issues": [],
-    "evaluation_timestamp": "2025-12-11T01:40:54.435281"
+    "evaluation_timestamp": "2025-12-11T16:33:18.024438"
   },
   {
     "submission_id": "#141",
@@ -61,23 +45,23 @@
     "overall_score": 97.0,
     "final_status": "PASS",
     "issues": [],
-    "evaluation_timestamp": "2025-12-11T01:40:54.435281"
+    "evaluation_timestamp": "2025-12-11T16:33:18.024438"
   },
   {
     "submission_id": "#169",
     "participant": "Unknown",
     "security_passed": true,
-    "security_score": 86.0,
+    "security_score": 94.0,
     "compliance_passed": true,
     "compliance_score": 98.0,
     "data_integrity_passed": true,
     "data_integrity_score": 100.0,
     "contest_rules_passed": true,
-    "contest_rules_score": 100.0,
-    "overall_score": 95.3,
+    "contest_rules_score": 92.0,
+    "overall_score": 96.10000000000001,
     "final_status": "PASS",
     "issues": [],
-    "evaluation_timestamp": "2025-12-11T01:40:54.435281"
+    "evaluation_timestamp": "2025-12-11T16:33:18.024438"
   },
   {
     "submission_id": "#154",
@@ -93,7 +77,7 @@
     "overall_score": 93.45,
     "final_status": "PASS",
     "issues": [],
-    "evaluation_timestamp": "2025-12-11T01:40:54.435281"
+    "evaluation_timestamp": "2025-12-11T16:33:18.024438"
   },
   {
     "submission_id": "#138",
@@ -109,7 +93,7 @@
     "overall_score": 93.3,
     "final_status": "PASS",
     "issues": [],
-    "evaluation_timestamp": "2025-12-11T01:40:54.435281"
+    "evaluation_timestamp": "2025-12-11T16:33:18.024438"
   },
   {
     "submission_id": "#219",
@@ -125,7 +109,7 @@
     "overall_score": 92.9,
     "final_status": "PASS",
     "issues": [],
-    "evaluation_timestamp": "2025-12-11T01:40:54.435281"
+    "evaluation_timestamp": "2025-12-11T16:33:18.024438"
   },
   {
     "submission_id": "#208",
@@ -141,26 +125,7 @@
     "overall_score": 92.9,
     "final_status": "PASS",
     "issues": [],
-    "evaluation_timestamp": "2025-12-11T01:40:54.435281"
-  },
-  {
-    "submission_id": "#142",
-    "participant": "Unknown",
-    "security_passed": true,
-    "security_score": 85.0,
-    "compliance_passed": true,
-    "compliance_score": 100.0,
-    "data_integrity_passed": false,
-    "data_integrity_score": 0.0,
-    "contest_rules_passed": false,
-    "contest_rules_score": 0,
-    "overall_score": 50.5,
-    "final_status": "FAIL",
-    "issues": [
-      "Data Integrity: Failed (0.0/100)",
-      "Contest Rules: Failed (0.0/100)"
-    ],
-    "evaluation_timestamp": "2025-12-11T01:40:54.435281"
+    "evaluation_timestamp": "2025-12-11T16:33:18.024438"
   },
   {
     "submission_id": "#185",
@@ -179,6 +144,45 @@
       "Data Integrity: Failed (0.0/100)",
       "Contest Rules: Failed (0.0/100)"
     ],
-    "evaluation_timestamp": "2025-12-11T01:40:54.435281"
+    "evaluation_timestamp": "2025-12-11T16:33:18.024438"
+  },
+  {
+    "submission_id": "#142",
+    "participant": "Unknown",
+    "security_passed": true,
+    "security_score": 85.0,
+    "compliance_passed": true,
+    "compliance_score": 100.0,
+    "data_integrity_passed": false,
+    "data_integrity_score": 0.0,
+    "contest_rules_passed": false,
+    "contest_rules_score": 0,
+    "overall_score": 50.5,
+    "final_status": "FAIL",
+    "issues": [
+      "Data Integrity: Failed (0.0/100)",
+      "Contest Rules: Failed (0.0/100)"
+    ],
+    "evaluation_timestamp": "2025-12-11T16:33:18.024438"
+  },
+  {
+    "submission_id": "#205",
+    "participant": "Unknown",
+    "security_passed": true,
+    "security_score": 89.0,
+    "compliance_passed": false,
+    "compliance_score": 65.0,
+    "data_integrity_passed": false,
+    "data_integrity_score": 0,
+    "contest_rules_passed": false,
+    "contest_rules_score": 0,
+    "overall_score": 42.95,
+    "final_status": "FAIL",
+    "issues": [
+      "Compliance: Failed (65.0/100)",
+      "Data Integrity: Failed (0.0/100)",
+      "Contest Rules: Failed (0.0/100)"
+    ],
+    "evaluation_timestamp": "2025-12-11T16:33:18.024438"
   }
 ]
