@@ -48,10 +48,60 @@ Thumbs.db
 # Contest specific
 submissions/
 participant-submissions/
+
+## Contest Participants 
+
+# Usman A. @usman21285
 Usman-Adaptive-Momentum-Reversion-Hybrid-Trading-Strategy-main/
+Usman-Quantum-Momentum-Strategy-main/
+
+# Wahedul I. @Adnan777
 Trading-Strategy-BTC-main/
+
+# jayyx03 submissions
 strategyname-jayyx03-main/
 second_submission_jayyx03-main/
+
+#  Saniya .. @SaniyaSuria
+Saniya_strategy_submission/
+
+# Abu B. @abubakar1745
+abubakar-strategy-template-main/
+
+# Harsh T. @tanyat29
+tanyat29_Strategy_contest-main/
+
+# Abdul L. @ masory74
+masory74-momentum-strategy-main/
+
+# qungleiw
+qingleiw-2nd-clean-strategy-contest-main/
+Qinglei-winning-strategy-template/
+
+# edudi
+edudzi-4th-buyhold-maximizer-strategy-main/
+edudzi-buyhold-maximizer-strategy/
+edudzi-trend-follower-main/
+edudzi-vol-momentum-main/
+
+# bano
+bano-crypto-adaptive-trend-fusion-strategy-main/
+
+# Shadan A. (shadanarif)
+Shadan-adaptive-allocation-trend-strategy-main/
+shadan-optimized-momentum-strategy-main/
+
+# Suhail S. (@suhailsiyad0887)
+golden-pyramid-trading-strategy-main/
+
+suhailsiyad0887-Trading-Strategy-main/
+
+# Abu B. (@abubakar1745)
+abubakar1745-trading-strategy-template-main/
+
+
+
+
 
 # Sensitive data
 *secret*
@@ -70,3 +120,9 @@ settings.local.json
 
 # contest files
 CLAUDE_CONTEST_TRACKER.md
+
+
+#final check
+final_evaluation/
+security_audit_results/
+security_audit_final_results/
