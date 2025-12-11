@@ -1,0 +1,320 @@
+[
+  {
+    "submission_id": "#138",
+    "participant": "Unknown",
+    "passed": true,
+    "integrity_score": 100.0,
+    "issues": [],
+    "hardcoded_data_detected": false,
+    "synthetic_data_detected": false,
+    "hindsight_bias_detected": false,
+    "suspicious_timestamps": false,
+    "unrealistic_data_patterns": false,
+    "non_market_hours_trading": false,
+    "scan_timestamp": "2025-12-11T01:40:42.310256"
+  },
+  {
+    "submission_id": "#141",
+    "participant": "Unknown",
+    "passed": true,
+    "integrity_score": 100.0,
+    "issues": [],
+    "hardcoded_data_detected": false,
+    "synthetic_data_detected": false,
+    "hindsight_bias_detected": false,
+    "suspicious_timestamps": false,
+    "unrealistic_data_patterns": false,
+    "non_market_hours_trading": false,
+    "scan_timestamp": "2025-12-11T01:40:42.376568"
+  },
+  {
+    "submission_id": "#142",
+    "participant": "Unknown",
+    "passed": false,
+    "integrity_score": 0.0,
+    "issues": [
+      {
+        "severity": "HIGH",
+        "category": "Synthetic Data",
+        "description": "Synthetic data generation detected: noise = random.gauss(0, current_price * 0.01)  # 1% volatility",
+        "file_path": "reports\\backtest_runner.py",
+        "line_number": 77,
+        "code_snippet": "noise = random.gauss(0, current_price * 0.01)  # 1% volatility",
+        "recommendation": "Remove synthetic data generation; use only real market data"
+      },
+      {
+        "severity": "HIGH",
+        "category": "Synthetic Data",
+        "description": "Synthetic data generation detected: high = max(current_price, new_price) * (1 + random.uniform(0, 0.005))",
+        "file_path": "reports\\backtest_runner.py",
+        "line_number": 83,
+        "code_snippet": "high = max(current_price, new_price) * (1 + random.uniform(0, 0.005))",
+        "recommendation": "Remove synthetic data generation; use only real market data"
+      },
+      {
+        "severity": "HIGH",
+        "category": "Synthetic Data",
+        "description": "Synthetic data generation detected: low = min(current_price, new_price) * (1 - random.uniform(0, 0.005))",
+        "file_path": "reports\\backtest_runner.py",
+        "line_number": 84,
+        "code_snippet": "low = min(current_price, new_price) * (1 - random.uniform(0, 0.005))",
+        "recommendation": "Remove synthetic data generation; use only real market data"
+      },
+      {
+        "severity": "HIGH",
+        "category": "Synthetic Data",
+        "description": "Synthetic data generation detected: \"volume\": random.uniform(100, 1000)",
+        "file_path": "reports\\backtest_runner.py",
+        "line_number": 92,
+        "code_snippet": "\"volume\": random.uniform(100, 1000)",
+        "recommendation": "Remove synthetic data generation; use only real market data"
+      },
+      {
+        "severity": "HIGH",
+        "category": "Synthetic Data",
+        "description": "Synthetic data generation detected: noise = random.gauss(0, current_price * 0.015)  # 1.5% volatility (higher in corrections)",
+        "file_path": "reports\\backtest_runner.py",
+        "line_number": 119,
+        "code_snippet": "noise = random.gauss(0, current_price * 0.015)  # 1.5% volatility (higher in corrections)",
+        "recommendation": "Remove synthetic data generation; use only real market data"
+      },
+      {
+        "severity": "HIGH",
+        "category": "Synthetic Data",
+        "description": "Synthetic data generation detected: noise += current_price * random.uniform(0.01, 0.02)",
+        "file_path": "reports\\backtest_runner.py",
+        "line_number": 123,
+        "code_snippet": "noise += current_price * random.uniform(0.01, 0.02)",
+        "recommendation": "Remove synthetic data generation; use only real market data"
+      },
+      {
+        "severity": "HIGH",
+        "category": "Synthetic Data",
+        "description": "Synthetic data generation detected: high = max(current_price, new_price) * (1 + random.uniform(0, 0.008))",
+        "file_path": "reports\\backtest_runner.py",
+        "line_number": 128,
+        "code_snippet": "high = max(current_price, new_price) * (1 + random.uniform(0, 0.008))",
+        "recommendation": "Remove synthetic data generation; use only real market data"
+      },
+      {
+        "severity": "HIGH",
+        "category": "Synthetic Data",
+        "description": "Synthetic data generation detected: low = min(current_price, new_price) * (1 - random.uniform(0, 0.008))",
+        "file_path": "reports\\backtest_runner.py",
+        "line_number": 129,
+        "code_snippet": "low = min(current_price, new_price) * (1 - random.uniform(0, 0.008))",
+        "recommendation": "Remove synthetic data generation; use only real market data"
+      },
+      {
+        "severity": "HIGH",
+        "category": "Synthetic Data",
+        "description": "Synthetic data generation detected: \"volume\": random.uniform(100, 1000)",
+        "file_path": "reports\\backtest_runner.py",
+        "line_number": 137,
+        "code_snippet": "\"volume\": random.uniform(100, 1000)",
+        "recommendation": "Remove synthetic data generation; use only real market data"
+      }
+    ],
+    "hardcoded_data_detected": false,
+    "synthetic_data_detected": true,
+    "hindsight_bias_detected": false,
+    "suspicious_timestamps": false,
+    "unrealistic_data_patterns": false,
+    "non_market_hours_trading": false,
+    "scan_timestamp": "2025-12-11T01:40:42.415342"
+  },
+  {
+    "submission_id": "#154",
+    "participant": "Unknown",
+    "passed": true,
+    "integrity_score": 100.0,
+    "issues": [],
+    "hardcoded_data_detected": false,
+    "synthetic_data_detected": false,
+    "hindsight_bias_detected": false,
+    "suspicious_timestamps": false,
+    "unrealistic_data_patterns": false,
+    "non_market_hours_trading": false,
+    "scan_timestamp": "2025-12-11T01:40:42.462541"
+  },
+  {
+    "submission_id": "#169",
+    "participant": "Unknown",
+    "passed": true,
+    "integrity_score": 100.0,
+    "issues": [],
+    "hardcoded_data_detected": false,
+    "synthetic_data_detected": false,
+    "hindsight_bias_detected": false,
+    "suspicious_timestamps": false,
+    "unrealistic_data_patterns": false,
+    "non_market_hours_trading": false,
+    "scan_timestamp": "2025-12-11T01:40:42.514814"
+  },
+  {
+    "submission_id": "#185",
+    "participant": "Unknown",
+    "passed": false,
+    "integrity_score": 0.0,
+    "issues": [
+      {
+        "severity": "HIGH",
+        "category": "Synthetic Data",
+        "description": "Synthetic data generation detected: noise = random.gauss(0, current_price * 0.01)  # 1% volatility",
+        "file_path": "reports\\backtest_runner.py",
+        "line_number": 77,
+        "code_snippet": "noise = random.gauss(0, current_price * 0.01)  # 1% volatility",
+        "recommendation": "Remove synthetic data generation; use only real market data"
+      },
+      {
+        "severity": "HIGH",
+        "category": "Synthetic Data",
+        "description": "Synthetic data generation detected: high = max(current_price, new_price) * (1 + random.uniform(0, 0.005))",
+        "file_path": "reports\\backtest_runner.py",
+        "line_number": 83,
+        "code_snippet": "high = max(current_price, new_price) * (1 + random.uniform(0, 0.005))",
+        "recommendation": "Remove synthetic data generation; use only real market data"
+      },
+      {
+        "severity": "HIGH",
+        "category": "Synthetic Data",
+        "description": "Synthetic data generation detected: low = min(current_price, new_price) * (1 - random.uniform(0, 0.005))",
+        "file_path": "reports\\backtest_runner.py",
+        "line_number": 84,
+        "code_snippet": "low = min(current_price, new_price) * (1 - random.uniform(0, 0.005))",
+        "recommendation": "Remove synthetic data generation; use only real market data"
+      },
+      {
+        "severity": "HIGH",
+        "category": "Synthetic Data",
+        "description": "Synthetic data generation detected: \"volume\": random.uniform(100, 1000)",
+        "file_path": "reports\\backtest_runner.py",
+        "line_number": 92,
+        "code_snippet": "\"volume\": random.uniform(100, 1000)",
+        "recommendation": "Remove synthetic data generation; use only real market data"
+      },
+      {
+        "severity": "HIGH",
+        "category": "Synthetic Data",
+        "description": "Synthetic data generation detected: noise = random.gauss(0, current_price * 0.015)  # 1.5% volatility (higher in corrections)",
+        "file_path": "reports\\backtest_runner.py",
+        "line_number": 119,
+        "code_snippet": "noise = random.gauss(0, current_price * 0.015)  # 1.5% volatility (higher in corrections)",
+        "recommendation": "Remove synthetic data generation; use only real market data"
+      },
+      {
+        "severity": "HIGH",
+        "category": "Synthetic Data",
+        "description": "Synthetic data generation detected: noise += current_price * random.uniform(0.01, 0.02)",
+        "file_path": "reports\\backtest_runner.py",
+        "line_number": 123,
+        "code_snippet": "noise += current_price * random.uniform(0.01, 0.02)",
+        "recommendation": "Remove synthetic data generation; use only real market data"
+      },
+      {
+        "severity": "HIGH",
+        "category": "Synthetic Data",
+        "description": "Synthetic data generation detected: high = max(current_price, new_price) * (1 + random.uniform(0, 0.008))",
+        "file_path": "reports\\backtest_runner.py",
+        "line_number": 128,
+        "code_snippet": "high = max(current_price, new_price) * (1 + random.uniform(0, 0.008))",
+        "recommendation": "Remove synthetic data generation; use only real market data"
+      },
+      {
+        "severity": "HIGH",
+        "category": "Synthetic Data",
+        "description": "Synthetic data generation detected: low = min(current_price, new_price) * (1 - random.uniform(0, 0.008))",
+        "file_path": "reports\\backtest_runner.py",
+        "line_number": 129,
+        "code_snippet": "low = min(current_price, new_price) * (1 - random.uniform(0, 0.008))",
+        "recommendation": "Remove synthetic data generation; use only real market data"
+      },
+      {
+        "severity": "HIGH",
+        "category": "Synthetic Data",
+        "description": "Synthetic data generation detected: \"volume\": random.uniform(100, 1000)",
+        "file_path": "reports\\backtest_runner.py",
+        "line_number": 137,
+        "code_snippet": "\"volume\": random.uniform(100, 1000)",
+        "recommendation": "Remove synthetic data generation; use only real market data"
+      }
+    ],
+    "hardcoded_data_detected": false,
+    "synthetic_data_detected": true,
+    "hindsight_bias_detected": false,
+    "suspicious_timestamps": false,
+    "unrealistic_data_patterns": false,
+    "non_market_hours_trading": false,
+    "scan_timestamp": "2025-12-11T01:40:42.552023"
+  },
+  {
+    "submission_id": "#198",
+    "participant": "Unknown",
+    "passed": true,
+    "integrity_score": 100.0,
+    "issues": [],
+    "hardcoded_data_detected": false,
+    "synthetic_data_detected": false,
+    "hindsight_bias_detected": false,
+    "suspicious_timestamps": false,
+    "unrealistic_data_patterns": false,
+    "non_market_hours_trading": false,
+    "scan_timestamp": "2025-12-11T01:40:42.612564"
+  },
+  {
+    "submission_id": "#205",
+    "participant": "Unknown",
+    "passed": true,
+    "integrity_score": 100.0,
+    "issues": [],
+    "hardcoded_data_detected": false,
+    "synthetic_data_detected": false,
+    "hindsight_bias_detected": false,
+    "suspicious_timestamps": false,
+    "unrealistic_data_patterns": false,
+    "non_market_hours_trading": false,
+    "scan_timestamp": "2025-12-11T01:40:42.660709"
+  },
+  {
+    "submission_id": "#208",
+    "participant": "Unknown",
+    "passed": true,
+    "integrity_score": 100.0,
+    "issues": [],
+    "hardcoded_data_detected": false,
+    "synthetic_data_detected": false,
+    "hindsight_bias_detected": false,
+    "suspicious_timestamps": false,
+    "unrealistic_data_patterns": false,
+    "non_market_hours_trading": false,
+    "scan_timestamp": "2025-12-11T01:40:42.730919"
+  },
+  {
+    "submission_id": "#219",
+    "participant": "Unknown",
+    "passed": true,
+    "integrity_score": 100.0,
+    "issues": [],
+    "hardcoded_data_detected": false,
+    "synthetic_data_detected": false,
+    "hindsight_bias_detected": false,
+    "suspicious_timestamps": false,
+    "unrealistic_data_patterns": false,
+    "non_market_hours_trading": false,
+    "scan_timestamp": "2025-12-11T01:40:42.790619"
+  },
+  {
+    "submission_id": "#36",
+    "participant": "Unknown",
+    "passed": true,
+    "integrity_score": 100.0,
+    "issues": [],
+    "hardcoded_data_detected": false,
+    "synthetic_data_detected": false,
+    "hindsight_bias_detected": false,
+    "suspicious_timestamps": false,
+    "unrealistic_data_patterns": false,
+    "non_market_hours_trading": false,
+    "scan_timestamp": "2025-12-11T01:40:42.856769"
+  }
+]

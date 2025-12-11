@@ -1,0 +1,233 @@
+[
+  {
+    "submission_id": "#138",
+    "participant": "Unknown",
+    "passed": true,
+    "rules_score": 95.0,
+    "violations": [
+      {
+        "severity": "HIGH",
+        "category": "Performance Metrics",
+        "description": "Missing required metrics: total_trades",
+        "file_path": "reports/backtest_report.md",
+        "recommendation": "Include all required performance metrics in backtest report",
+        "metric_value": null,
+        "threshold": null
+      }
+    ],
+    "total_pnl": 3610.0,
+    "total_return": 36.1,
+    "max_drawdown": 26.16,
+    "sharpe_ratio": null,
+    "total_trades": null,
+    "win_rate": 71.9,
+    "folder_structure_valid": true,
+    "backtest_report_present": true,
+    "required_files_present": true,
+    "starting_capital_compliant": true,
+    "trading_period_compliant": true,
+    "assets_compliant": true
+  },
+  {
+    "submission_id": "#141",
+    "participant": "Unknown",
+    "passed": true,
+    "rules_score": 85.0,
+    "violations": [
+      {
+        "severity": "HIGH",
+        "category": "Performance Metrics",
+        "description": "Missing required metrics: total_pnl, max_drawdown, total_trades",
+        "file_path": "reports/backtest_report.md",
+        "recommendation": "Include all required performance metrics in backtest report",
+        "metric_value": null,
+        "threshold": null
+      }
+    ],
+    "total_pnl": null,
+    "total_return": null,
+    "max_drawdown": null,
+    "sharpe_ratio": null,
+    "total_trades": null,
+    "win_rate": null,
+    "folder_structure_valid": true,
+    "backtest_report_present": true,
+    "required_files_present": true,
+    "starting_capital_compliant": true,
+    "trading_period_compliant": true,
+    "assets_compliant": true
+  },
+  {
+    "submission_id": "#154",
+    "participant": "Unknown",
+    "passed": true,
+    "rules_score": 97.0,
+    "violations": [
+      {
+        "severity": "HIGH",
+        "category": "Performance Metrics",
+        "description": "Missing required metrics: total_trades",
+        "file_path": "reports/backtest_report.md",
+        "recommendation": "Include all required performance metrics in backtest report",
+        "metric_value": null,
+        "threshold": null
+      }
+    ],
+    "total_pnl": 7300.0,
+    "total_return": 73.0,
+    "max_drawdown": 27.41,
+    "sharpe_ratio": 1.38,
+    "total_trades": null,
+    "win_rate": 72.0,
+    "folder_structure_valid": true,
+    "backtest_report_present": true,
+    "required_files_present": true,
+    "starting_capital_compliant": true,
+    "trading_period_compliant": true,
+    "assets_compliant": true
+  },
+  {
+    "submission_id": "#169",
+    "participant": "Unknown",
+    "passed": true,
+    "rules_score": 100.0,
+    "violations": [
+      {
+        "severity": "MEDIUM",
+        "category": "Unrealistic Sharpe",
+        "description": "Sharpe ratio of 68.00 appears unrealistic",
+        "file_path": "performance metrics",
+        "recommendation": "Verify Sharpe ratio calculation methodology",
+        "metric_value": null,
+        "threshold": null
+      }
+    ],
+    "total_pnl": 3610.0,
+    "total_return": 36.1,
+    "max_drawdown": 26.16,
+    "sharpe_ratio": 68.0,
+    "total_trades": 68,
+    "win_rate": 4.0,
+    "folder_structure_valid": true,
+    "backtest_report_present": true,
+    "required_files_present": true,
+    "starting_capital_compliant": true,
+    "trading_period_compliant": true,
+    "assets_compliant": true
+  },
+  {
+    "submission_id": "#198",
+    "participant": "Unknown",
+    "passed": true,
+    "rules_score": 100.0,
+    "violations": [],
+    "total_pnl": 2394.0,
+    "total_return": 23.94,
+    "max_drawdown": 16.12,
+    "sharpe_ratio": 1.27,
+    "total_trades": 14,
+    "win_rate": 50.0,
+    "folder_structure_valid": true,
+    "backtest_report_present": true,
+    "required_files_present": true,
+    "starting_capital_compliant": true,
+    "trading_period_compliant": true,
+    "assets_compliant": true
+  },
+  {
+    "submission_id": "#205",
+    "participant": "Unknown",
+    "passed": true,
+    "rules_score": 100.0,
+    "violations": [],
+    "total_pnl": 2394.0,
+    "total_return": 23.94,
+    "max_drawdown": 16.12,
+    "sharpe_ratio": 1.27,
+    "total_trades": 14,
+    "win_rate": 50.0,
+    "folder_structure_valid": true,
+    "backtest_report_present": true,
+    "required_files_present": true,
+    "starting_capital_compliant": true,
+    "trading_period_compliant": true,
+    "assets_compliant": true
+  },
+  {
+    "submission_id": "#208",
+    "participant": "Unknown",
+    "passed": true,
+    "rules_score": 85.0,
+    "violations": [
+      {
+        "severity": "HIGH",
+        "category": "Performance Metrics",
+        "description": "Missing required metrics: max_drawdown",
+        "file_path": "reports/backtest_report.md",
+        "recommendation": "Include all required performance metrics in backtest report",
+        "metric_value": null,
+        "threshold": null
+      }
+    ],
+    "total_pnl": 1000.0,
+    "total_return": 10.0,
+    "max_drawdown": null,
+    "sharpe_ratio": null,
+    "total_trades": 10,
+    "win_rate": null,
+    "folder_structure_valid": true,
+    "backtest_report_present": true,
+    "required_files_present": true,
+    "starting_capital_compliant": true,
+    "trading_period_compliant": true,
+    "assets_compliant": true
+  },
+  {
+    "submission_id": "#219",
+    "participant": "Unknown",
+    "passed": true,
+    "rules_score": 85.0,
+    "violations": [
+      {
+        "severity": "HIGH",
+        "category": "Performance Metrics",
+        "description": "Missing required metrics: max_drawdown",
+        "file_path": "reports/backtest_report.md",
+        "recommendation": "Include all required performance metrics in backtest report",
+        "metric_value": null,
+        "threshold": null
+      }
+    ],
+    "total_pnl": 1000.0,
+    "total_return": 10.0,
+    "max_drawdown": null,
+    "sharpe_ratio": null,
+    "total_trades": 10,
+    "win_rate": null,
+    "folder_structure_valid": true,
+    "backtest_report_present": true,
+    "required_files_present": true,
+    "starting_capital_compliant": true,
+    "trading_period_compliant": true,
+    "assets_compliant": true
+  },
+  {
+    "submission_id": "#36",
+    "participant": "Unknown",
+    "passed": true,
+    "rules_score": 100.0,
+    "violations": [],
+    "total_pnl": 322.00000000000006,
+    "total_return": 3.22,
+    "max_drawdown": 5.99,
+    "sharpe_ratio": 1.36,
+    "total_trades": 10,
+    "win_rate": null,
+    "folder_structure_valid": true,
+    "backtest_report_present": true,
+    "required_files_present": true,
+    "starting_capital_compliant": true,
+    "trading_period_compliant": true,
+    "assets_compliant": true
+  }
+]

@@ -1,0 +1,564 @@
+[
+  {
+    "submission_id": "#138",
+    "participant": "Unknown",
+    "total_issues": 7,
+    "critical_issues": 0,
+    "high_issues": 0,
+    "medium_issues": 3,
+    "low_issues": 4,
+    "security_score": 81.0,
+    "passed": true,
+    "issues": [
+      {
+        "severity": "MEDIUM",
+        "category": "File System Write",
+        "description": "Dangerous pattern detected: open\\s*\\([^)]*[\"\\'][wa][\"\\']",
+        "file_path": "final_evaluation\\#138\\reports\\backtest_runner.py",
+        "line_number": 436,
+        "code_snippet": "with open(report_path, 'w', encoding='utf-8') as f:",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε την ανάγκη για file_system_write"
+      },
+      {
+        "severity": "LOW",
+        "category": "Unapproved Imports",
+        "description": "Import of non-whitelisted module: io",
+        "file_path": "final_evaluation\\#138\\reports\\backtest_runner.py",
+        "line_number": 21,
+        "code_snippet": "import io",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε ρητά την ανάγκη χρήσης αυτού του module"
+      },
+      {
+        "severity": "LOW",
+        "category": "Unapproved Imports",
+        "description": "Import of non-whitelisted module: traceback",
+        "file_path": "final_evaluation\\#138\\reports\\backtest_runner.py",
+        "line_number": 464,
+        "code_snippet": "import traceback",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε ρητά την ανάγκη χρήσης αυτού του module"
+      },
+      {
+        "severity": "MEDIUM",
+        "category": "File System Write",
+        "description": "Dangerous pattern detected: open\\s*\\([^)]*[\"\\'][wa][\"\\']",
+        "file_path": "final_evaluation\\#138\\reports\\backtest_runner_new.py",
+        "line_number": 433,
+        "code_snippet": "with open(report_path, 'w', encoding='utf-8') as f:",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε την ανάγκη για file_system_write"
+      },
+      {
+        "severity": "LOW",
+        "category": "Unapproved Imports",
+        "description": "Import of non-whitelisted module: io",
+        "file_path": "final_evaluation\\#138\\reports\\backtest_runner_new.py",
+        "line_number": 21,
+        "code_snippet": "import io",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε ρητά την ανάγκη χρήσης αυτού του module"
+      },
+      {
+        "severity": "LOW",
+        "category": "Unapproved Imports",
+        "description": "Import of non-whitelisted module: traceback",
+        "file_path": "final_evaluation\\#138\\reports\\backtest_runner_new.py",
+        "line_number": 461,
+        "code_snippet": "import traceback",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε ρητά την ανάγκη χρήσης αυτού του module"
+      },
+      {
+        "severity": "MEDIUM",
+        "category": "Strategy Import Collection",
+        "description": "Import of strategy module: quantum_momentum_strategy (potential strategy collection)",
+        "file_path": "final_evaluation\\#138\\your-strategy-template\\startup.py",
+        "line_number": 19,
+        "code_snippet": "import quantum_momentum_strategy",
+        "recommendation": "Contest submissions should contain one strategy, not collections"
+      }
+    ],
+    "scan_timestamp": "2025-12-11T01:35:08.580069",
+    "files_scanned": [
+      "reports\\backtest_runner.py",
+      "reports\\backtest_runner_new.py",
+      "your-strategy-template\\startup.py",
+      "your-strategy-template\\your_strategy.py"
+    ]
+  },
+  {
+    "submission_id": "#141",
+    "participant": "Unknown",
+    "total_issues": 0,
+    "critical_issues": 0,
+    "high_issues": 0,
+    "medium_issues": 0,
+    "low_issues": 0,
+    "security_score": 100.0,
+    "passed": true,
+    "issues": [],
+    "scan_timestamp": "2025-12-11T01:35:08.611384",
+    "files_scanned": [
+      "reports\\backtest_runner.py",
+      "your-strategy-template\\startup.py",
+      "your-strategy-template\\your_strategy.py"
+    ]
+  },
+  {
+    "submission_id": "#142",
+    "participant": "Unknown",
+    "total_issues": 3,
+    "critical_issues": 0,
+    "high_issues": 0,
+    "medium_issues": 3,
+    "low_issues": 0,
+    "security_score": 85.0,
+    "passed": true,
+    "issues": [
+      {
+        "severity": "MEDIUM",
+        "category": "File System Write",
+        "description": "Dangerous pattern detected: open\\s*\\([^)]*[\"\\'][wa][\"\\']",
+        "file_path": "final_evaluation\\#142\\reports\\backtest_runner.py",
+        "line_number": 464,
+        "code_snippet": "with open(\"backtest_results.json\", \"w\") as f:",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε την ανάγκη για file_system_write"
+      },
+      {
+        "severity": "MEDIUM",
+        "category": "Strategy Import Collection",
+        "description": "Import of strategy module: adaptive_trend_strategy (potential strategy collection)",
+        "file_path": "final_evaluation\\#142\\reports\\backtest_runner.py",
+        "line_number": 24,
+        "code_snippet": "import adaptive_trend_strategy",
+        "recommendation": "Contest submissions should contain one strategy, not collections"
+      },
+      {
+        "severity": "MEDIUM",
+        "category": "Strategy Import Collection",
+        "description": "Import of strategy module: adaptive_trend_strategy (potential strategy collection)",
+        "file_path": "final_evaluation\\#142\\your-strategy-template\\startup.py",
+        "line_number": 17,
+        "code_snippet": "import adaptive_trend_strategy",
+        "recommendation": "Contest submissions should contain one strategy, not collections"
+      }
+    ],
+    "scan_timestamp": "2025-12-11T01:35:08.674426",
+    "files_scanned": [
+      "reports\\backtest_runner.py",
+      "your-strategy-template\\startup.py",
+      "your-strategy-template\\your_strategy.py"
+    ]
+  },
+  {
+    "submission_id": "#154",
+    "participant": "Unknown",
+    "total_issues": 6,
+    "critical_issues": 0,
+    "high_issues": 0,
+    "medium_issues": 2,
+    "low_issues": 4,
+    "security_score": 86.0,
+    "passed": true,
+    "issues": [
+      {
+        "severity": "LOW",
+        "category": "Unapproved Imports",
+        "description": "Import of non-whitelisted module: backtest_historical",
+        "file_path": "final_evaluation\\#154\\reports\\backtest_runner.py",
+        "line_number": 14,
+        "code_snippet": "from backtest_historical import run_backtest",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε ρητά την ανάγκη χρήσης αυτού του module"
+      },
+      {
+        "severity": "LOW",
+        "category": "Unapproved Imports",
+        "description": "Import of non-whitelisted module: subprocess",
+        "file_path": "final_evaluation\\#154\\your-strategy-template\\backtest_historical.py",
+        "line_number": 84,
+        "code_snippet": "import subprocess",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε ρητά την ανάγκη χρήσης αυτού του module"
+      },
+      {
+        "severity": "LOW",
+        "category": "Dependency Management",
+        "description": "Runtime pip install for yfinance (contest acceptable)",
+        "file_path": "final_evaluation\\#154\\your-strategy-template\\backtest_historical.py",
+        "line_number": 85,
+        "code_snippet": "subprocess.check_call([sys.executable, \"-m\", \"pip\", \"install\", \"yfinance\"])",
+        "recommendation": "Καλύτερα να προ-εγκαταστήσεις τα dependencies, αλλά αποδεκτό για yfinance"
+      },
+      {
+        "severity": "MEDIUM",
+        "category": "Environment Access",
+        "description": "Access to environment variables detected",
+        "file_path": "final_evaluation\\#154\\your-strategy-template\\backtest_historical.py",
+        "line_number": 96,
+        "code_snippet": "proxy_url = os.environ.get('YFINANCE_PROXY')",
+        "recommendation": "Αφαίρεσε την πρόσβαση σε environment variables εκτός αν είναι απαραίτητη"
+      },
+      {
+        "severity": "MEDIUM",
+        "category": "Strategy Import Collection",
+        "description": "Import of strategy module: winning_strategy (potential strategy collection)",
+        "file_path": "final_evaluation\\#154\\your-strategy-template\\startup.py",
+        "line_number": 22,
+        "code_snippet": "import winning_strategy",
+        "recommendation": "Contest submissions should contain one strategy, not collections"
+      },
+      {
+        "severity": "LOW",
+        "category": "Reflection/Dynamic Access",
+        "description": "Dangerous pattern detected: \\bhasattr\\s*\\(",
+        "file_path": "final_evaluation\\#154\\your-strategy-template\\your_strategy.py",
+        "line_number": 254,
+        "code_snippet": "if hasattr(market, 'timestamp') and market.timestamp:",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε την ανάγκη για reflection"
+      }
+    ],
+    "scan_timestamp": "2025-12-11T01:35:08.735657",
+    "files_scanned": [
+      "reports\\backtest_runner.py",
+      "your-strategy-template\\backtest_historical.py",
+      "your-strategy-template\\startup.py",
+      "your-strategy-template\\your_strategy.py"
+    ]
+  },
+  {
+    "submission_id": "#169",
+    "participant": "Unknown",
+    "total_issues": 6,
+    "critical_issues": 0,
+    "high_issues": 0,
+    "medium_issues": 2,
+    "low_issues": 4,
+    "security_score": 86.0,
+    "passed": true,
+    "issues": [
+      {
+        "severity": "LOW",
+        "category": "Unapproved Imports",
+        "description": "Import of non-whitelisted module: backtest_historical",
+        "file_path": "final_evaluation\\#169\\reports\\backtest_runner.py",
+        "line_number": 14,
+        "code_snippet": "from backtest_historical import run_backtest",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε ρητά την ανάγκη χρήσης αυτού του module"
+      },
+      {
+        "severity": "LOW",
+        "category": "Unapproved Imports",
+        "description": "Import of non-whitelisted module: subprocess",
+        "file_path": "final_evaluation\\#169\\your-strategy-template\\backtest_historical.py",
+        "line_number": 84,
+        "code_snippet": "import subprocess",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε ρητά την ανάγκη χρήσης αυτού του module"
+      },
+      {
+        "severity": "LOW",
+        "category": "Dependency Management",
+        "description": "Runtime pip install for yfinance (contest acceptable)",
+        "file_path": "final_evaluation\\#169\\your-strategy-template\\backtest_historical.py",
+        "line_number": 85,
+        "code_snippet": "subprocess.check_call([sys.executable, \"-m\", \"pip\", \"install\", \"yfinance\"])",
+        "recommendation": "Καλύτερα να προ-εγκαταστήσεις τα dependencies, αλλά αποδεκτό για yfinance"
+      },
+      {
+        "severity": "MEDIUM",
+        "category": "Environment Access",
+        "description": "Access to environment variables detected",
+        "file_path": "final_evaluation\\#169\\your-strategy-template\\backtest_historical.py",
+        "line_number": 96,
+        "code_snippet": "proxy_url = os.environ.get('YFINANCE_PROXY')",
+        "recommendation": "Αφαίρεσε την πρόσβαση σε environment variables εκτός αν είναι απαραίτητη"
+      },
+      {
+        "severity": "MEDIUM",
+        "category": "Strategy Import Collection",
+        "description": "Import of strategy module: winning_strategy (potential strategy collection)",
+        "file_path": "final_evaluation\\#169\\your-strategy-template\\startup.py",
+        "line_number": 22,
+        "code_snippet": "import winning_strategy",
+        "recommendation": "Contest submissions should contain one strategy, not collections"
+      },
+      {
+        "severity": "LOW",
+        "category": "Reflection/Dynamic Access",
+        "description": "Dangerous pattern detected: \\bhasattr\\s*\\(",
+        "file_path": "final_evaluation\\#169\\your-strategy-template\\your_strategy.py",
+        "line_number": 254,
+        "code_snippet": "if hasattr(market, 'timestamp') and market.timestamp:",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε την ανάγκη για reflection"
+      }
+    ],
+    "scan_timestamp": "2025-12-11T01:35:08.793602",
+    "files_scanned": [
+      "reports\\backtest_runner.py",
+      "your-strategy-template\\backtest_historical.py",
+      "your-strategy-template\\startup.py",
+      "your-strategy-template\\your_strategy.py"
+    ]
+  },
+  {
+    "submission_id": "#185",
+    "participant": "Unknown",
+    "total_issues": 3,
+    "critical_issues": 0,
+    "high_issues": 0,
+    "medium_issues": 3,
+    "low_issues": 0,
+    "security_score": 85.0,
+    "passed": true,
+    "issues": [
+      {
+        "severity": "MEDIUM",
+        "category": "File System Write",
+        "description": "Dangerous pattern detected: open\\s*\\([^)]*[\"\\'][wa][\"\\']",
+        "file_path": "final_evaluation\\#185\\reports\\backtest_runner.py",
+        "line_number": 464,
+        "code_snippet": "with open(\"backtest_results.json\", \"w\") as f:",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε την ανάγκη για file_system_write"
+      },
+      {
+        "severity": "MEDIUM",
+        "category": "Strategy Import Collection",
+        "description": "Import of strategy module: adaptive_trend_strategy (potential strategy collection)",
+        "file_path": "final_evaluation\\#185\\reports\\backtest_runner.py",
+        "line_number": 24,
+        "code_snippet": "import adaptive_trend_strategy",
+        "recommendation": "Contest submissions should contain one strategy, not collections"
+      },
+      {
+        "severity": "MEDIUM",
+        "category": "Strategy Import Collection",
+        "description": "Import of strategy module: adaptive_trend_strategy (potential strategy collection)",
+        "file_path": "final_evaluation\\#185\\your-strategy-template\\startup.py",
+        "line_number": 17,
+        "code_snippet": "import adaptive_trend_strategy",
+        "recommendation": "Contest submissions should contain one strategy, not collections"
+      }
+    ],
+    "scan_timestamp": "2025-12-11T01:35:08.855650",
+    "files_scanned": [
+      "reports\\backtest_runner.py",
+      "your-strategy-template\\startup.py",
+      "your-strategy-template\\your_strategy.py"
+    ]
+  },
+  {
+    "submission_id": "#198",
+    "participant": "Unknown",
+    "total_issues": 3,
+    "critical_issues": 0,
+    "high_issues": 0,
+    "medium_issues": 1,
+    "low_issues": 2,
+    "security_score": 93.0,
+    "passed": true,
+    "issues": [
+      {
+        "severity": "MEDIUM",
+        "category": "File System Write",
+        "description": "Dangerous pattern detected: open\\s*\\([^)]*[\"\\'][wa][\"\\']",
+        "file_path": "final_evaluation\\#198\\reports\\backtest_runner.py",
+        "line_number": 472,
+        "code_snippet": "with open(report_path, 'w', encoding='utf-8') as f:",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε την ανάγκη για file_system_write"
+      },
+      {
+        "severity": "LOW",
+        "category": "Unapproved Imports",
+        "description": "Import of non-whitelisted module: io",
+        "file_path": "final_evaluation\\#198\\reports\\backtest_runner.py",
+        "line_number": 40,
+        "code_snippet": "import io",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε ρητά την ανάγκη χρήσης αυτού του module"
+      },
+      {
+        "severity": "LOW",
+        "category": "Unapproved Imports",
+        "description": "Import of non-whitelisted module: traceback",
+        "file_path": "final_evaluation\\#198\\reports\\backtest_runner.py",
+        "line_number": 529,
+        "code_snippet": "import traceback",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε ρητά την ανάγκη χρήσης αυτού του module"
+      }
+    ],
+    "scan_timestamp": "2025-12-11T01:35:08.909241",
+    "files_scanned": [
+      "reports\\backtest_runner.py",
+      "your-strategy-template\\startup.py",
+      "your-strategy-template\\your_strategy.py"
+    ]
+  },
+  {
+    "submission_id": "#205",
+    "participant": "Unknown",
+    "total_issues": 3,
+    "critical_issues": 0,
+    "high_issues": 0,
+    "medium_issues": 1,
+    "low_issues": 2,
+    "security_score": 93.0,
+    "passed": true,
+    "issues": [
+      {
+        "severity": "MEDIUM",
+        "category": "File System Write",
+        "description": "Dangerous pattern detected: open\\s*\\([^)]*[\"\\'][wa][\"\\']",
+        "file_path": "final_evaluation\\#205\\reports\\backtest_runner.py",
+        "line_number": 472,
+        "code_snippet": "with open(report_path, 'w', encoding='utf-8') as f:",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε την ανάγκη για file_system_write"
+      },
+      {
+        "severity": "LOW",
+        "category": "Unapproved Imports",
+        "description": "Import of non-whitelisted module: io",
+        "file_path": "final_evaluation\\#205\\reports\\backtest_runner.py",
+        "line_number": 40,
+        "code_snippet": "import io",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε ρητά την ανάγκη χρήσης αυτού του module"
+      },
+      {
+        "severity": "LOW",
+        "category": "Unapproved Imports",
+        "description": "Import of non-whitelisted module: traceback",
+        "file_path": "final_evaluation\\#205\\reports\\backtest_runner.py",
+        "line_number": 529,
+        "code_snippet": "import traceback",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε ρητά την ανάγκη χρήσης αυτού του module"
+      }
+    ],
+    "scan_timestamp": "2025-12-11T01:35:08.960402",
+    "files_scanned": [
+      "reports\\backtest_runner.py",
+      "your-strategy-template\\startup.py",
+      "your-strategy-template\\your_strategy.py"
+    ]
+  },
+  {
+    "submission_id": "#208",
+    "participant": "Unknown",
+    "total_issues": 4,
+    "critical_issues": 0,
+    "high_issues": 0,
+    "medium_issues": 2,
+    "low_issues": 2,
+    "security_score": 88.0,
+    "passed": true,
+    "issues": [
+      {
+        "severity": "MEDIUM",
+        "category": "File System Write",
+        "description": "Dangerous pattern detected: open\\s*\\([^)]*[\"\\'][wa][\"\\']",
+        "file_path": "final_evaluation\\#208\\reports\\backtest_runner.py",
+        "line_number": 433,
+        "code_snippet": "with open(report_path, 'w', encoding='utf-8') as f:",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε την ανάγκη για file_system_write"
+      },
+      {
+        "severity": "LOW",
+        "category": "Unapproved Imports",
+        "description": "Import of non-whitelisted module: io",
+        "file_path": "final_evaluation\\#208\\reports\\backtest_runner.py",
+        "line_number": 21,
+        "code_snippet": "import io",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε ρητά την ανάγκη χρήσης αυτού του module"
+      },
+      {
+        "severity": "LOW",
+        "category": "Unapproved Imports",
+        "description": "Import of non-whitelisted module: traceback",
+        "file_path": "final_evaluation\\#208\\reports\\backtest_runner.py",
+        "line_number": 461,
+        "code_snippet": "import traceback",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε ρητά την ανάγκη χρήσης αυτού του module"
+      },
+      {
+        "severity": "MEDIUM",
+        "category": "Strategy Import Collection",
+        "description": "Import of strategy module: adaptive_trend_fusion_strategy (potential strategy collection)",
+        "file_path": "final_evaluation\\#208\\your-strategy-template\\startup.py",
+        "line_number": 19,
+        "code_snippet": "import adaptive_trend_fusion_strategy",
+        "recommendation": "Contest submissions should contain one strategy, not collections"
+      }
+    ],
+    "scan_timestamp": "2025-12-11T01:35:09.026451",
+    "files_scanned": [
+      "reports\\backtest_runner.py",
+      "your-strategy-template\\startup.py",
+      "your-strategy-template\\your_strategy.py"
+    ]
+  },
+  {
+    "submission_id": "#219",
+    "participant": "Unknown",
+    "total_issues": 4,
+    "critical_issues": 0,
+    "high_issues": 0,
+    "medium_issues": 2,
+    "low_issues": 2,
+    "security_score": 88.0,
+    "passed": true,
+    "issues": [
+      {
+        "severity": "MEDIUM",
+        "category": "File System Write",
+        "description": "Dangerous pattern detected: open\\s*\\([^)]*[\"\\'][wa][\"\\']",
+        "file_path": "final_evaluation\\#219\\reports\\backtest_runner.py",
+        "line_number": 433,
+        "code_snippet": "with open(report_path, 'w', encoding='utf-8') as f:",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε την ανάγκη για file_system_write"
+      },
+      {
+        "severity": "LOW",
+        "category": "Unapproved Imports",
+        "description": "Import of non-whitelisted module: io",
+        "file_path": "final_evaluation\\#219\\reports\\backtest_runner.py",
+        "line_number": 21,
+        "code_snippet": "import io",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε ρητά την ανάγκη χρήσης αυτού του module"
+      },
+      {
+        "severity": "LOW",
+        "category": "Unapproved Imports",
+        "description": "Import of non-whitelisted module: traceback",
+        "file_path": "final_evaluation\\#219\\reports\\backtest_runner.py",
+        "line_number": 461,
+        "code_snippet": "import traceback",
+        "recommendation": "Αφαίρεσε ή τεκμηρίωσε ρητά την ανάγκη χρήσης αυτού του module"
+      },
+      {
+        "severity": "MEDIUM",
+        "category": "Strategy Import Collection",
+        "description": "Import of strategy module: adaptive_trend_fusion_strategy (potential strategy collection)",
+        "file_path": "final_evaluation\\#219\\your-strategy-template\\startup.py",
+        "line_number": 19,
+        "code_snippet": "import adaptive_trend_fusion_strategy",
+        "recommendation": "Contest submissions should contain one strategy, not collections"
+      }
+    ],
+    "scan_timestamp": "2025-12-11T01:35:09.095433",
+    "files_scanned": [
+      "reports\\backtest_runner.py",
+      "your-strategy-template\\startup.py",
+      "your-strategy-template\\your_strategy.py"
+    ]
+  },
+  {
+    "submission_id": "#36",
+    "participant": "Unknown",
+    "total_issues": 0,
+    "critical_issues": 0,
+    "high_issues": 0,
+    "medium_issues": 0,
+    "low_issues": 0,
+    "security_score": 100.0,
+    "passed": true,
+    "issues": [],
+    "scan_timestamp": "2025-12-11T01:35:09.165107",
+    "files_scanned": [
+      "reports\\backtest_runner.py",
+      "reports\\optimizer.py",
+      "your-strategy-template\\startup.py",
+      "your-strategy-template\\your_strategy.py"
+    ]
+  }
+]
